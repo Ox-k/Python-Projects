@@ -7,4 +7,4 @@ This repository leverages the thechnologies ofr Jupyter Lab, SciKitLearn, Tensor
 ## Installation Instructions
 Fork and clone this repository onto your system
 
-##😊
+## happy coding 😊
