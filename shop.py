@@ -65,4 +65,25 @@ class Item:
             except ValueError:
                # throw an error if an invalid input was obtained
                raise("Invalid quantity")
+               
+# PUT THIS IN ITS OWN FILE
+#•••••••••••••••••••••••••••
+
+#import Item
+class Cart(Item):
+    # cart emulates the shopping cart
+    def __init__(self,Item,cart_total=0):
+        super()
+        self.cart_total=cart_total
+        self.item_list= []
+    
+    #add items
+    def add_toCart(Item):
+        self.item_list.append(Item)
+        
+    #calc total in the cart
+    def calc_total():
+        #TODO: implement logic later
+        pass
+        
     
