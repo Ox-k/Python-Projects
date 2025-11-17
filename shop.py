@@ -107,5 +107,28 @@ class Cart:
         """Calculate the total price of all items."""
         total = 0
         for item in self.item_list:
-            total += item.price  # assuming Item has a price attribute
+            total += item.itemPrice  # assuming Item has a price attribute
         return total
+      
+#class to simulate shopping
+class shop:
+   def __init__(self):
+      pass
+      
+   # ask user to add items
+   def grocery_list(self):
+      #get item name
+      item_name = input("What item do you want?: ")
+      
+      # get the price...assume user will enter valid price
+      item_price = float(input("Enter its price in the format 00.00: $"))
+      
+      #get the quantity..... assume user will enter valid number 
+      item_quantity = int(input("How many " + item_name + "(s) do you want to purchase?: "))
+      
+      #create item object
+      item = Item(item_name, item_price, item_quantity)
+      
+      # return the item object
+      return item
+      
