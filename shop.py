@@ -70,6 +70,7 @@ class Item:
 #•••••••••••••••••••••••••••
 
 #import Item
+"""
 class Cart(Item):
     # cart emulates the shopping cart
     def __init__(self,Item,cart_total=0):
@@ -85,5 +86,26 @@ class Cart(Item):
     def calc_total():
         #TODO: implement logic later
         pass
+"""
         
-    
+# WORKING VERSION
+#•••••••••••••••••
+#from Item import Item
+
+class Cart:
+    """Represents a shopping cart holding multiple Item objects."""
+
+    def __init__(self, cart_total=0):
+        self.cart_total = cart_total
+        self.item_list = []
+
+    def add_toCart(self, item: Item):
+        """Adds an Item object to the cart."""
+        self.item_list.append(item)
+
+    def calc_total(self):
+        """Calculate the total price of all items."""
+        total = 0
+        for item in self.item_list:
+            total += item.price  # assuming Item has a price attribute
+        return total
