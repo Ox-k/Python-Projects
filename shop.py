@@ -96,6 +96,7 @@ class Cart:
     """Represents a shopping cart holding multiple Item objects."""
 
     def __init__(self, cart_total=0):
+        # total might not be useful here
         self.cart_total = cart_total
         self.item_list = []
 
@@ -130,5 +131,8 @@ class shop:
       item = Item(item_name, item_price, item_quantity)
       
       # return the item object
-      return item
+      # we need to return the list in the cart
+      cart = Cart()
+      cart.add_toCart(item)
+      return cart
       
