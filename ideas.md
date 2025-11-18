@@ -1,8 +1,9 @@
 <section align="center">
 <h1 align="center">Core Ideas</h1>
 <h3>Simulation Challenge</h3>
-<blockquote> 
+<blockquote align="start"> 
 Create a </br>
+<h3>Store</h3>
 <code>A shopping Store </code>
 </br>
 <code> Should have departments </code>
@@ -16,7 +17,7 @@ Create a </br>
 
 <h3>Client</h3>
 <blockquote>
-    <code>A client should have: </code>
+    <code>Employee should have: </code>
     </br>
 <code>
     employee_name </br> 
