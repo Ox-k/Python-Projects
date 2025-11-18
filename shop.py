@@ -20,17 +20,21 @@ class Item:
         self.itemName = itemName
         self.itemPrice= itemPrice
         self.itemQuantity=itemQuantity
+        self.price_by_quantity = 0
     
    # getting the name of the item
     def getItemName(self):
+        print(f"This is the item name: {self.itemName}")
         return self.itemName
       
    #getting the price of the item 
     def getItemPrice():
+        print(f"This is the item price: {self.itemPrice}")
         return self.itemPrice
       
    # getting the item quantity
     def getItemQuantity():
+        print(f"This is the file quantity: {self.itemQuantity}")
         return self.itemQuantity
       
    # changing the existing quantity of items
@@ -65,31 +69,11 @@ class Item:
             except ValueError:
                # throw an error if an invalid input was obtained
                raise("Invalid quantity")
+   def get_total_per_item():
+      return self.price_per_quantity
                
 # PUT THIS IN ITS OWN FILE
 #•••••••••••••••••••••••••••
-
-#import Item
-"""
-class Cart(Item):
-    # cart emulates the shopping cart
-    def __init__(self,Item,cart_total=0):
-        super()
-        self.cart_total=cart_total
-        self.item_list= []
-    
-    #add items
-    def add_toCart(Item):
-        self.item_list.append(Item)
-        
-    #calc total in the cart
-    def calc_total():
-        #TODO: implement logic later
-        pass
-"""
-        
-# WORKING VERSION
-#•••••••••••••••••
 #from Item import Item
 
 class Cart:
@@ -103,19 +87,19 @@ class Cart:
     def add_toCart(self, item: Item):
         """Adds an Item object to the cart."""
         self.item_list.append(item)
+        print(f"This the status of the list")
+       for itm in item_list:
+          print(f"{itm}")
 
-    def calc_total(self):
+    def calc_total_per_item(self):
         """Calculate the total price of all items."""
-        total = 0
         for item in self.item_list:
-            total += item.itemPrice  # assuming Item has a price attribute
-        return total
+            item.get_total_per_item() = item.getItemPrice() * item.getItemQuantity()  # assuming Item has a price attribute
+            print(f"{item} : total per item {item.get_total_per_item()}")
+        return self.item_list
       
 #class to simulate shopping
 class shop:
-   def __init__(self):
-      pass
-      
    # ask user to add items
    def grocery_list(self):
       #get item name
@@ -129,10 +113,18 @@ class shop:
       
       #create item object
       item = Item(item_name, item_price, item_quantity)
+      print(f"Item: name -> {item.item_name}, {item.item_price}, {item.item_quantity}")
       
       # return the item object
       # we need to return the list in the cart
+      print(f"Initializing cart ...... ")
       cart = Cart()
       cart.add_toCart(item)
+      print("Items in the cart - NOT YET")
+      
       return cart
+# Put everything together
+class Store:
+   start_shopping = shop()
+   start_shopping.grocery_list()
       
