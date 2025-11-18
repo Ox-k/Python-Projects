@@ -1,0 +1,1 @@
+<h1 align="center">Core Ideas</h1>
