@@ -40,4 +40,9 @@ Create a </br>
 
 ![My Badge](https://img.shields.io/badge/Project-Ready-brightgreen?style=for-the-badge&logo=github)
 
+</br>
+
+![plastic](https://img.shields.io/badge/style-plastic-blue?style=plastic)
+
+
 ## add more as needed
