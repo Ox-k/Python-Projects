@@ -33,5 +33,7 @@ Create a </br>
 </section>
 
 </br>
-![Status badge](https://img.shields.io/badge/status-active-brightgreen)
+
+![badge](https://img.shields.io/badge/Test-Badge-green)
+
 ## add more as needed
