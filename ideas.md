@@ -1,5 +1,5 @@
 <section align="center">
-<h1 align="center">Core Ideas</h1>
+<h1 align="center"><font color="red">Core Ideas<font></h1>
 <h3 style="color:green">Simulation Challenge</h3>
 <blockquote align="start"> 
 Create a </br>
