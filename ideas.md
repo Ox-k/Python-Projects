@@ -1,4 +1,4 @@
-<section align="center">
+se<section align="center">
 <h1 align="center"><font color="red">Core Ideas<font></h1>
 <h3 style="color:green">Simulation Challenge</h3>
 <blockquote align="start"> 
@@ -35,5 +35,9 @@ Create a </br>
 </br>
 
 ![badge](https://img.shields.io/badge/Test-Badge-green)
+
+</br>
+
+![My Badge](https://img.shields.io/badge/Project-Ready-brightgreen?style=for-the-badge&logo=github)
 
 ## add more as needed
