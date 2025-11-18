@@ -32,4 +32,7 @@ Create a </br>
 </blockquote>
 </section>
 
+<svg width="200">
+  <text x="0" y="20" fill="red">Hello</text>
+</svg>
 ## add more as needed
