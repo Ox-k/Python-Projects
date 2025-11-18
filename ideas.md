@@ -32,7 +32,6 @@ Create a </br>
 </blockquote>
 </section>
 
-<svg width="200">
-  <text x="0" y="20" fill="red">Hello</text>
-</svg>
+</br>
+![Status badge](https://img.shields.io/badge/status-active-brightgreen)
 ## add more as needed
