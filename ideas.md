@@ -1,6 +1,6 @@
 <section align="center">
 <h1 align="center">Core Ideas</h1>
-<h3>Simulation Challenge</h3>
+<h3 style="color:green">Simulation Challenge</h3>
 <blockquote align="start"> 
 Create a </br>
 <h3>Store</h3>
@@ -16,7 +16,7 @@ Create a </br>
  </blockquote>
 
 <h3>Client</h3>
-<blockquote>
+<blockquote align="start">
     <code>Employee should have: </code>
     </br>
 <code>
