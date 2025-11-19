@@ -5,10 +5,9 @@ class Task:
     def __init__(self, name, description ="no description"):
         self.name = name
         self.description = description
+        
 """ task blue print and actions """
 # import the class: Task
-
-
 #import Task
 class Task_todo:
     #contructor for a task object
@@ -43,7 +42,7 @@ class Task_todo:
 
 """ Create a Todo list """
 # imoort the class: Task_todo
-import Task_todo
+#import Task_todo
 class Todo_List:
     #constructor for a todo list item
     # initializez a dictionary
@@ -69,15 +68,15 @@ class Todo_List:
         self.task_todo.description = input("Enter task description: ")
 
         #print test the project
-        print(f"Task: {self.task_todo.get_task_name()}\n
-                       Description: {self.task_todo.get_task_description()}\n
-                       Completed: {self.task_todo.is_completed()}")
+        print(f"Task: {self.task_todo.get_task_name()}\n"
+                       f"Description: {self.task_todo.get_task_description()}\n"
+                       f"Completed: {self.task_todo.is_completed()}")
 
     # test method 
-    def test_project(self):
-        self.create_todo_list_item()
+    #def test_project(self):
+        #self.create_todo_list_item()
 
     # run the project
     if __name__ == "__main__":
-        self.test_project()
+        self.create_todo_list_item("Task 1")
     
