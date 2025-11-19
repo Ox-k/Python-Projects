@@ -1,6 +1,15 @@
+
+""" Task blue print and attributes """
+class Task:
+    #constructor that initializes a task and its description to default value
+    def __init__(self, name, description ="no description"):
+        self.name = name
+        self.description = description
 """ task blue print and actions """
 # import the class: Task
-import Task
+
+
+#import Task
 class Task_todo:
     #contructor for a task object
     def __init__(self, task_todo:Task):
@@ -30,19 +39,6 @@ class Task_todo:
     # check if task is completed
     def is_completed(self):
         return self.task_completed
-
-
-
-""" Task blue print and attributes """
-class Task:
-    #constructor that initializes a task and its description to default value
-    def __init__(self, name, description ="no description"):
-        self.name = name
-        self.description = description
-
-
-
-
 
 
 """ Create a Todo list """
@@ -78,10 +74,10 @@ class Todo_List:
                        Completed: {self.task_todo.is_completed()}")
 
     # test method 
-    def test_project():
+    def test_project(self):
         self.create_todo_list_item()
 
     # run the project
     if __name__ == "__main__":
-        test_project()
+        self.test_project()
     
