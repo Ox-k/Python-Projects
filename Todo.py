@@ -16,14 +16,11 @@ class Task_todo:
     
     # setter for nmae
     def set_task_name(self, new_task_name):
-        return 
-        self.task_todo.name=new_task_name
+        return self.task_todo.name=new_task_name
     
     #setter for description
-    def set_task_description(
-        self, new_task_description):
-        return self.task_todo.description
-        = new_task_description
+    def set_task_description(self, new_task_description):
+        return self.task_todo.description = new_task_description
     
     
     # check if task is completed
