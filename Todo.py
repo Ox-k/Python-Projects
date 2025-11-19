@@ -66,15 +66,20 @@ class Todo_List:
 
         #get the task description
         self.task_todo.description = input("Enter task description: ")
+       
 
         #print test the project
         print(f"Task: {self.task_todo.get_task_name()}\n"
                        f"Description: {self.task_todo.get_task_description()}\n"
                        f"Completed: {self.task_todo.is_completed()}")
 
-    # test method 
-    #def test_project(self):
-        #self.create_todo_list_item()
+    # add task to the dictionary
+    self.todo_dict.update(
+    self.task_todo.get_task_name(): self.task_todo.get_task_description())
+    
+     print(f"Dtctinary contents\n")
+     for key, value in this.todo_dict.values:
+        print(f"Name: {key}, description: {value}")
 
     # run the project
     if __name__ == "__main__":
