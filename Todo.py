@@ -1,4 +1,6 @@
 """ task blue print and actions """
+# import the class: Task
+import Task
 class Task_todo:
     #contructor for a task object
     def __init__(self, task_todo:Task):
@@ -44,6 +46,8 @@ class Task:
 
 
 """ Create a Todo list """
+# imoort the class: Task_todo
+import Task_todo
 class Todo_List:
     #constructor for a todo list item
     # initializez a dictionary
