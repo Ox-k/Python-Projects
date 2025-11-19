@@ -4,7 +4,7 @@ class Task_todo:
     def __init__(self, task_todo:Task):
         self.task_todo = task_todo
         #initially set it to false
-        self.task_completed = false
+        self.task_completed = False
         
     #getter ror task name
     def get_task_name(self):
@@ -16,15 +16,17 @@ class Task_todo:
     
     # setter for nmae
     def set_task_name(self, new_task_name):
-        return self.task_todo.name=new_task_name
+        self.task_todo.name=new_task_name
+        return self.task_todo.name
     
     #setter for description
     def set_task_description(self, new_task_description):
-        return self.task_todo.description = new_task_description
+        self.task_todo.description = new_task_description
+        return self.task_todo.description
     
     
     # check if task is completed
-    def is_completed(self) -> bool:
+    def is_completed(self):
         return self.task_completed
 
 
@@ -73,9 +75,9 @@ class Todo_List:
 
     # test method 
     def test_project():
-        create_todo_list_item()
+        self.create_todo_list_item()
 
     # run the project
-    if __main__ == "__main__":
+    if __name__ == "__main__":
         test_project()
     
