@@ -1,0 +1,13 @@
+App that has:
+
+tranks expenditures
+gains
+losses
+sprrad gains/ losses
+daily gains
+dividend
+limit
+database (shared)
+calendar:showcasing gains/loss/spread
+
+.... more
