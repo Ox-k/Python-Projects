@@ -1,13 +1,44 @@
 App that has:
 
-tranks expenditures
+tracks expenditures
 gains
 losses
 sprrad gains/ losses
 daily gains
-dividend
+dividend or payouts
 limit
 database (shared)
 calendar:showcasing gains/loss/spread
 
 .... more
+
+APPLICATION STORY
+••••••••••••••••••
+MVP
+UI: web-based
+User can:
+		* has to add initial amount : principla
+		create a card that:
+				has the day's withdraw
+				has day's expenditure
+				has day's final deposit
+				has the day's loss/gain
+				has a time set to count-up
+
+App: should connect to a local database
+		 should push card detail's to the database
+		 should pull details from the database
+		 should populate cards on launch
+		 should have a cell that lets user add a card
+		 should have a total in the footer
+
+Tools
+••••••
+	Review python
+	review JS
+	review HTML/CSS
+
+WORKFLOW
+••••••••••
+create a workflow management on JIRA
+
