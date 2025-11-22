@@ -322,11 +322,96 @@ thisis capableof housing numeracal data of various types.<br>
 <b>NumPy</b> also has vector capabilities which allow to process calculations on vast numbers <br>
 This is better than a traditional loop <br>
 <h4>Example</h4>
-Suppose that we want to calcuate a 
+Suppose that we want to add a vector
+<br> we need to import <b>NumPy</b>: <code>import numpy as np</code><br>
+Then let us create a vector. Remember a vector is an array of value, so,<br>
+We need to transform a list into an array and <b>numpy</b> has just a tool for that<br>
+<code>pieces = np.array([100, 200, 300, 400])</code><br>
+Now we want to perform this math: <br><br>
 
 
+```yml
+    [200, 300, 400]
+  - [400, 300, 200]
+...................
+    [-200, 0, 200]
+
+```
+
+<br>
+<br>
+This is done as: <code>prices[1:] - prices[:-1]</code>
+<br><br>
+Essentially slicing
+<br><br>
+This can also be achieved using a loop bu it would look messy and possibly introduce errors
+<br><br>
+<b>NumPy</b> also support other powerful operation that would otherwise be impossible with a loop<</br>
+we can calculate operations on vectors that are not compatible by reshaping the smaller one to match the bigger
+<h4>Example</h4>
+<code>[1,2,3] + [1,2]</code> .... this would not work because they do not have the same dimensions
+<br>
+We can instead apply <b>r.reshape(row, cols)
+</b>
 
 
+```yml
+  arr0 = np.array([1,2,3])
+  arr1 = np.array([1,2])
+
+  Then reshape arr1 to be 1x2 ➡️ 2x1 as such
+  new_arr1 = arr1.reshape(1,3)
+
+  Basically, it fleeps the array around to match the other one for operations ????
+  if they do no math. This is called BROADCASTING
+
+  Reshaping: breaks down an array into subarrays
+  Broadcasting: rea-arranges the dimension of the array
+
+  you can PAD an array and add a 0 at the end
+  padded_Arry = np.pad(arr1, (0,1))  ... means add one 0 at end
+
+```
+<br>
+<br>
+Before applying broadcasting, observe shape of you arrays and imagine how <code>numpy</code> will<br>
+expand the dimenstions to match and ensure that the operations aligns with your intent.<br>
+<br>
+Use <code>reshape()</code> and <code>newaxis()</code> to broadcast your arrays to align to your desired <br>
+manipulations.<br>
+Print shapes of the arrayat various steps as a debugging technique.
+<h3 align="center">Reshape VS broadcast</h3>
+Reshape: does not duplicate values, it simply changes the dimension of the array<br>
+Broadcasting: duplicates the values to fill up the rest of the missing positions
+<br>
+<br>
+
+```yml
+
+  Numpy:
+    broadcasting lets you add arrays of diff shapes if their sizes are compatible
+    basically if their shape is the same. (see what shape is below table)
+
+     
+
+```
+
+<br><br>
+
+|Name          | Shape           |  Meaning                                |
+|:-------------|:----------------|----------------------------------------:|
+|1D array      | (n, )           | n elements -NO row or columns           |
+|Row vector    | (1, n)          | 1 row, no columns                       |
+|Column vector | (n, 1)          | n rows, 1 column                        |
+
+<br><br>
+<h3>How to tell if a vector or an array?</h3>
+<code>if it's a <b>1D</b>, its an <b>array</b>: [1,2,4], if rows and columns appear, then its a vector</code><br>
+<h4>Example</h4>
+<code>np.array([[1,2,3]]) .... this is a row vector (1,3); and np.array([[],[],[]]) is a (3,1) col vector</code>
+<br><br>
+
+<h3><code>TO BE CONTINUED....</code></h3>
 
 
 
