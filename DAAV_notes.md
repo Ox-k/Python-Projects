@@ -105,4 +105,96 @@ print()
 2      35     male       75000
 3      40     female     55000
 ```
+<br>
+<h3 align="center">Environment for Data Analysis</h3><br>
+<code>Jupypter Notebook: Web code editor that lets your control chunks of code</code><br>
+<code>Pandas : cleans and organise data</code><br>
+<code>NumPy: Math on data</code><br>
+<code>MatPlotlib & Apache Superset: Data Visualization</code><br>
+
+<h3 align="center">Jupyter notebook tricks and tips</h3><br>
+
+```yml
+Jupyter has:
+  - code cells: where code is written. to run code: Shift + Enter
+  - Markdown  : allows to format text and add images
+      🌟 you can add titles
+      🌟 you can add mathematical equations
+      🌟 you can add images
+      🌟 you can add formatted text
+      🌟 you can add hyper links and so on
+- AI code generation and auto completion
+
+
+```
+<br>
+
+
+<img width="568" height="213" alt="Screenshot 2025-11-22 at 11 17 26" src="https://github.com/user-attachments/assets/0d1eeaad-6da9-4378-a099-a9d4dbb44775" />
+
+<br>
+
+
+```yml
+To create a heading: # text
+
+```
+<br>
+<h3 align="center">Jupyter short cuts</h3><br>
+
+```yml
+up 🔼 / down 🔽: these allow you to move up or down cells
+Modes:
+  Edit mode: editing the content of a cell
+  Command mode: lets perform action on a cell.
+     Press "esc": to enter command mode
+          "A"             : to insert a cell above
+          "B"             : to insert a cell below
+          "D"x2           : to delete a cell
+          "M"             : to switch to "markdown"
+          "Y"             : to switch to code
+          "Ctrl + Enter"  : to run code [stay in the same cell]
+          "Shift + Enter" : to run code [Move to the next cell]
+
+  There are many more other commands.
+  Press:
+    "Escape" to enter command mode
+  Then:
+    "H" to pull up the drop dowm menu of the short cuts
+
+  Reminder on some piece of code:
+    - write the function
+    - press "Shift" + "TAB"
+  This will open a hover little documentation of the function implementation
+
+```
+<br>
+
+<h3 align="center">Magic functions</h3>
+These help you go beyond regular python code
+they start with a <code>%</code> sign.<br>
+These commands tell jupyter to display the result of the command right there in the book
+<br>
+<br>
+<h4>Example</h4>
+<br>
+
+```yml
+        %matplotlin inline: this place above the code, will draw the graph of what the data represents
+        %%timeit: this added above the code will time how long the code runs
+        !pip install library: this will install the library right in the notebook
+```
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
 
