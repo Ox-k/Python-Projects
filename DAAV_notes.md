@@ -187,6 +187,142 @@ These commands tell jupyter to display the result of the command right there in 
 
 <br>
 
+<h4>Example:</h4>
+
+```yml
+        SHOWCASING pandas AND matplotlib
+```
+
+```python
+
+import random
+import pandas as pd
+
+# 1. Define possible customers
+customer_names = [
+    "Alice Johnson", "Bob Smith", "Charlie Brown", "Diana Prince",
+    "Ethan Hunt", "Fiona Clarke", "George Miller", "Hannah Davis",
+    "Ian Wright", "Jessica Lee"
+]
+# 2. Define possible items
+purchase_item_list = [
+    "Laptop", "Mouse", "Smartphone", "Headphones", "Keyboard",
+    "Tablet", "Camera", "Tripod", "Monitor", "Printer",
+    "Smartwatch", "Speaker", "External Hard Driver", "Router", "Charger"
+]
+# 3. Generate a data set with 100 random customers
+expanded_data = {
+    # Random customer name for each row
+    "Customer Name": [
+        # choose a single name in customer_name list, do it x100
+        random.choice(customer_names) for _ in range(100)
+    ],
+
+    # Random, from the list "purchase_itel_list", choose 1 - 3 items
+    # join them together using a space
+    # repeat this 100 times
+    "Purchase Items": [
+        ", ".join(
+            random.sample(
+                purchase_item_list,          # from this list
+                random.randint(1, 3)         # choose between 1 and 3 items
+            )
+        )
+        for _ in range(100)
+    ],
+
+    # Random purchase cost between 50 and 1500, rounded to 2 decimals
+    "Purchase Cost": [
+        # this says: give me a value between 50 and 1500
+        # all values in this range should have an equal probability of getting chosen
+        # Then round it to 2 decimal places
+        # do this x100 more times
+        round(random.uniform(50, 1500), 2) for _ in range(100)
+    ]
+}
+# 4. Convert to a DataFrame (specifically a TABLE)
+customer_dataset = pd.DataFrame(expanded_data)
+
+# Show first 10 rows
+customer_dataset.head(10)
+
+# give me the count, mean, std, min, max, etc
+customer_dataset.describe()
+
+# group values by a certain condition and give me a sum of any numeric value they have
+grouped_dataset = customer_dataset.groupby("add one of the dectionary keys").sum(numeric_only=Tue)
+
+# display the grouped data by simply calling "grouped_data_set"
+grouped_data_set
+
+#Draw graph from the data
+%matplotlib inline    # this allows to plot graph with jupyter
+import matplotlib.pyplot as plt  # this is a library that helps to plot graphs
+
+# plot a 12 inches x 5 inches figure, this creates a plotting canvas
+plt.figure(figsize=(12,5))
+
+# In the figure, create a bar chart
+plt.bar(
+  # get the referencepoint in the data above,
+  # remember we grouped the data based on "Customer Name" a.k.a index or x-axis
+  x=grouped_dataset.index
+
+  # each bar is the height of the total price of each "purchase cost"
+  height=grouped_dataset["Purcahse Cost"]
+)
+
+# plot the 'x' lable
+
+# this adds label under the x-axis
+plt.xlabel("Customer Name")
+
+#this adds lable under the y-axis
+plt.ylabel("Total Purchase Cost")
+
+# this adds title above the graph
+plt.title("Total Purchase Cost per Customer")
+
+# rotate the labels on the x-axis by 45-deg and ["horizontal  alignment" = "right-aligned"]
+plt.xticks(rotation=45, ha="right")
+
+# automatically fix the layout, nothing overlaps or get cut-off
+plt.tight_layout()
+
+#  display the graph
+plt.show()
+
+# NOTE
+# The graph could also be customezed using other python libraries as follows
+
+# Import the library that is respoonsible for creting a range of colord bars
+import matplotlib.cm as cm
+
+plt.figure(figsize=(15,5))
+
+# compile a theme
+# themes: plasma, inferno, magma, cividis, cool, Wistia and rainbow ... your choice
+colors = cm.plasma(norm_values)
+plt.bar(
+    x=grouped_dataset.index, 
+    height=grouped_dataset["Purchase Cost"],
+
+    # assign the color theme
+    color=colors
+)
+plt.xticks(rotation=90)
+plt.show()
+
+```
+
+<br>
+<h3 align="center">NumPy</h3>
+provides <code>ndarray</code> <u>n-dimensional array</u>.<br>
+thisis capableof housing numeracal data of various types.<br>
+<b>NumPy</b> also has vector capabilities which allow to process calculations on vast numbers <br>
+This is better than a traditional loop <br>
+<h4>Example</h4>
+Suppose that we want to calcuate a 
 
 
 
