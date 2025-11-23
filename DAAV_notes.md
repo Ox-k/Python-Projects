@@ -411,7 +411,190 @@ Broadcasting: duplicates the values to fill up the rest of the missing positions
 <code>np.array([[1,2,3]]) .... this is a row vector (1,3); and np.array([[],[],[]]) is a (3,1) col vector</code>
 <br><br>
 
-<h3><code>TO BE CONTINUED....</code></h3>
+<h3>Multi-Dimensional arrays can not have different sizes</h3>
+<br>
+This would be illegal 👇
+<br>
+<br>
+
+
+
+```lua
+    [[1,2,3],[4,5]]   
+
+```
+
+<br>
+Because a <b>2D</b> array must be a perfect parallegram.
+<br>
+<h3>Broadcasting compares from right to left</h3>
+Broadcasting simplifies operations between arrays pf different shapes.<br>
+it does this by automatically expanding the deimesion of the smaller array to match the larger one
+<br>
+This allows to perform element operations without needing a loop
+<br><br>
+Normally arrays can be added if they have the same shape<br>
+<h4>Example</h4>
+
+```scss
+
+  These calculations can be performed:
+  👉 [1, 2, 3] + [4, 5, 6]   ✔️
+  👉  [1] [2]
+      [3]+[4]                 ✔️
+      [5] [6]
+
+  and so on ....
+  this is because every value has a corresponing value to be added to
+
+```
+
+<br><br>
+However these would not work in regualar array arithematic
+<br>
+
+```scss
+
+  These calculations can be performed:
+  👉 [1, 2, 3, 9] + [4, 5, 6]   🛑
+  👉  [1] [2]
+      [3]+[4]                   🛑
+      [5] [6]
+          [7]
+
+  and so on ....
+  this is because NOT every value has a corresponing value to be added to
+
+```
+
+<br><br>
+This is where <b>reshape</b> and <b>broadcasting</b> comes to the rescues,by expanding incompatible (smaller) arrays to be <br>
+the same szie as the larger array
+<br>
+<h5>how does broadcasting do this?...</h5>
+Take these two arrays:
+<br>
+
+
+```python
+    import numpy as np
+
+     # this is an array of shape (2,3)
+  👉 array0  = np.array ([[1, 2, 3], [4, 5, 6]])
+
+     # this is an array of shape (2, )
+  👉 array1  = np.array([10,20])
+
+
+```
+<br>
+NOTE: in this context <b>SHAPE</b> is not the same as <b>SIZE</b>.
+<br>
+<br>
+
+Now what <code>Boradcasting</code> does is: <b>Compare the "SHAPES" of the arrays from RIGHT to LEFT</b>
+<br>
+This means that it is going to look at the shapes and <q>stack</q> them on each other , <code> from right to left</code>
+<br>
+<h4>Example</h4>
+<br>
+
+
+```scss
+
+  Take the SHAPE of array0, write it down
+  Take the SHAPE of second array, just below array0, write it down
+  BUT: this time start with the right most digit, and write it under the right most digit of array0
+
+  Example:
+  shape of array0 -> (2, 3)
+  shape of array1 -> (2,  )
+
+  Then stack them according to the trick specified above:
+  (2, 3)
+     (2, )
+
+```
+
+<br><br>
+Now how does  <b> RESHAPES</b>ing the array work?<br>
+We use the method <code> array_name.reshape(a, b)</code>
+<br>
+Where: <br>
+a: <code> is the number of rows </code>
+<br>
+and <br>
+b: <code> is the number of columns </code>
+<br><br>
+<h4>Example</h4>
+<br>
+
+```python
+  newarray1 = array1.reshape(2, 1)
+
+```
+<br><br>
+This makes the <b>array1</b> look like a column vector below<br>
+```scss
+
+  👉  [10]
+      [20]
+
+```
+<br><br>
+And how we can perform arithmatic operations on the two arrays because the shapes are:
+<br>
+
+```scss
+
+(2, 3)
+(2, 1)
+
+```
+
+<br><br>
+Now <b>NmuPy Broadcasting</b> can compare and see if they have compatible shapes and add them
+<br>It does that by following the following rules (also outlined in the table above/earlier)<br>
+<b>Rule one</b><br>
+<code>if the shape of the array0 is (a, 1) and shape of array1 is (a, b), expand shape of array0 to be (a, b)</code>
+<br>
+
+This means: duplicate the column <code>a</code> across the array to match the columns of the other array<br>
+<h4>Example</h4>
+<br>
+
+```scss
+  We know that after reshaping the array1 from shape (2, ) to shape (2, 1)
+  We have the following array:
+      10
+      20
+
+  Now "exapnding" this means that we need to copy the columns to match the size of array0 columns
+  To do this, we copy the value of each row to fill up the rest of the row:
+      10 10 10
+      20 20 20
+
+```
+
+<br><br>
+Now this looks exactly the "array0"and we can stack them on top of each other<br>
+and each value will have a corresponding value from the other array.<br><br>
+
+<h4>Example</h4>
+<br>
+
+```scss
+
+    (2, 3)          (2, 1)
+      👇              👇
+    [1  2  3]      [10  10  10]     AND    array0 + array1   👉  [11  12  13]
+    [4  5  6]      [20  20  20]                                  [24  25  26]
+  
+    All this without having to implement a loop
+
+```
+<br><br>
+
 
 
 
