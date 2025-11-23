@@ -596,8 +596,22 @@ and each value will have a corresponding value from the other array.<br><br>
 <br><br>
 
 <h2 align="center">Use cases for python libraries</h2>
-<code> to be continued....</code>
+<h3>Data Collection</h3>
+There are several places where you can find publicly available data for use.<br>
+Alwasy read the licence that comes with the data so that you know what you can do and not do<br>
+with the data. (This will help to avoid any legal issues if you need to scale you use of data)
+<br>
+<br>
+```yml
+      Microsoft Azure: curated data for machine learning and AI applications
+      Microsoft Research Data Repository: data from microsoft research initiatives covering large domains
+      APIs: Many websites offer API that explains what data you can get access and how to access the data
+      World Bank: insights into global development challenges
+      Microsoft Planetary Computer: geospatial and environment analysis
 
+```
+<br><br>
+<h2 align="center">Data Cleaning 101</h2>
 
 
 
