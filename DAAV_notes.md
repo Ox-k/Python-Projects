@@ -602,6 +602,7 @@ Alwasy read the licence that comes with the data so that you know what you can d
 with the data. (This will help to avoid any legal issues if you need to scale you use of data)
 <br>
 <br>
+
 ```yml
       Microsoft Azure: curated data for machine learning and AI applications
       Microsoft Research Data Repository: data from microsoft research initiatives covering large domains
