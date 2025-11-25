@@ -609,10 +609,251 @@ with the data. (This will help to avoid any legal issues if you need to scale yo
       APIs: Many websites offer API that explains what data you can get access and how to access the data
       World Bank: insights into global development challenges
       Microsoft Planetary Computer: geospatial and environment analysis
+      Microsoft Azure Marketplace: financial data and other curated financial related stuff (paid)
+      Microsoft AI for Health Initiaive: Health data for research and innovation
 
 ```
 <br><br>
 <h2 align="center">Data Cleaning 101</h2>
+<h4>Common data quality problems</h4>
+<br>
+
+```yml
+      Missing Values: due to entery errors or un-availability of the data
+      Outliers: Data that is significantly different from others (anomalies)
+      Inconsistences: due to entry errors, change in data collection methods, merging datasets
+
+```
+
+<br><br>
+
+<h4>Strategies to address data quality problems</h4>
+<br>
+
+```yml
+      Removing dataset: remove entire segements that are missing the rest of the data
+      Imputing missing values: "imputing" ... meaning to assign substitude values for missing ones
+                              This can be like putting the mean, media, average to represent a missing
+                              value to fill in gaps and create a more complete dataset
+      Dealing with outliers: cap the limit of value threshold.
+      Resolve inconsistence:  standardize data formats, correct errors, remove or correct conflicting data
+                            Pandas has a tool called "replace()" that allows to replace specific values
+                            and "apply()" to apply custom functions to the data
+
+```
+
+<br><br>
+Data cleaning should be done with care to avoid either adding more data (in attempt to collect) <br>
+missing values and distorted the final representation of the data<br><br>
+
+<h3>Manipulating Data with Pandas</h3>
+<h4>The basics</h4>
+The structure of dataframes<br>
+DataFrame is a super charged spread-sheet. 2D table-like structure where data is organised into rows and colmuns<br>
+Each <code>column</code> represents a specific variable and each <code>row</code> corresponds to a specific <br>
+observation of data point.<br>
+<h4>DataFrame components & commo operations</h4>
+<br>
+
+
+```yml
+      Data    : content of the column; numerical textual or a mix of both
+      Index   : identifies each row in the data frame
+      Column  : identifies the different variables int he dataset; has a name and associated data type
+
+      Operations
+      Indexing  : Allow to access specific element in a file, by rows, columns etc
+      Slicing   : allows to select a range of data to select a portion of data
+      Filtering : Allow to select data/rows based on a specific criteria
+
+```
+
+<br><br>
+<h4>Pandas indexing</h4>
+Pandas library provides a library called <code>DataFrame</code> that is used to analyze structured data<br>
+It allows to locate and retrieve data through indexing's many methods.<br>
+
+<h5>Fundamental Indexing Methods</h5>
+<code>.loc</code>:<br>
+Label-based, it uses rows and columns labels to access data.<br>
+This means that you use the actual names of the rows and columns or index lables to retrieve data<br>
+
+<h6>Example</h6>
+<br>
+
+```python
+
+      .loc['customer_1', 'purchase_amount']
+            .... retrieves purchase amount for customer with id "customer_1"
+
+      ALSO NOTE: the lodic in the brackets is ['condition', 'what is returned']
+
+```
+<br>
+<br>
+<code>.iloc</code>:<br>
+This is position based.<br>
+You use integer position starting from 0 to locate data with the DataFrame.<br>
+This works regardless of the labels, and is useful when working with datasets of missing values<br>
+It supports slicing allowing you to select a range of rows or columns<br>
+
+<h6>Example of accessing data with <code>.iloc</code></h6>
+<code>.iloc[5, 2]</code>: This would access the value in the 3<sup>rd</sup> column of 6<sup>th</sup> row.<br>
+<br>
+<h5>Understanding <code>.iloc</code></h5>
+<br>
+
+```yml
+      ".iloc" can be trick to grasp
+      .iloc[row, column] ... starts indexing at 0 like an array.
+      That means if you want to access a value at a particular position, specify the "position - 1"
+      for both rows and columns
+      SO:
+        To get a value that is in the 10th row and 12 column: .iloc[(10-1), (12-1)]
+
+```
+
+<br><br>
+<h4>Boolean indexing</h4>
+This is also known as <q>Filtering data with precision</q> or <q>Mask indexing</q>
+<br>
+This is used by creating a <code>boolean mask</code>, this is an array of <code>True</code> and <code>False</code>
+<br>values that indicate which rows or columns meet specific criteria.<br>
+Then use this mask to return only the data that corresponds  to the true values.<br>
+<h6>Example</h6>
+Suppose you own a high-end luxury store, and you want to see a customer that has:<br>
+<li>Platinum membership</li>
+<li>purchases more than 10</li>
+<br>
+
+Boolean indexing allows you to do this as follows: <br>
+
+
+```python
+      df[(df['membership_level'] == 'platnum') & (df[purchases] >10)]
+
+    "df" is an alias for DataFrame as in: from pandas import DataFrame as df
+
+```
+<br><br>
+Boolean indexing is powerful because it allows you to select specific information with precision<br>
+It also allows you to combine boolean expression for more powerful selection and data retreival.<br>
+You can use the following logical operators:<br>
+
+```yml
+      & for AND
+      | for OR
+      ~ for NOT
+
+```
+<br><br>
+<h4>Other indexing methods</h4>
+When we want to modify a single value at a position or a label based location, we can use<br>
+
+```yml
+      .at : this is lable based, like .loc but for a single value
+      .iat : this is label based, like iloc but for a single value
+
+```
+<br>
+These can be very useful in larger datasets where performance us crucial
+.<br>
+Indexing allows you to modify and update values in the dataset easily and fast where performance matters
+<h6>Example</h6>
+Suppose that we want to update the <code>Membership</code> of a client to <code>Platinum</code><br>
+
+```yml
+      df.loc['customer_1', 'membership'] = 'Gold'
+
+```
+<br><br>
+<h4>Multi-level indexing</h4>
+Sometimes whn the data is organised in <code>hierarchies</code>, multi-level indexing with <code>pandas</code> help<br>
+access and retrieval data in a dataframe with easy and fast.<br>
+<h6>Example of multi-level indexing</h6>
+<br>
+
+```python
+
+      import pandas as pd
+
+      # Sample data
+      data = {
+                  'Sales': [200, 300, 250, 400, 500, 600],
+                  'Profit': [50, 80, 60, 100, 120, 150]
+      }
+
+      # Create a MultiIndex
+      index = pd.MultiIndex.from_tuples(
+          [('2021', 'Electronics'), ('2021', 'Clothing'),
+             ('2022', 'Electronics'), ('2022', 'Clothing'),
+             ('2023', 'Electronics'), ('2023', 'Clothing')
+          ],
+          names=['Year', 'Category']
+      )
+
+      # Create the DataFrame
+      df = pd.DataFrame(data, index=index)
+
+      print(df)
+
+      # Accessing sales for electronics in 2022
+      sales_2022_electronics = df.loc[('2022', 'Electronics'), 'Sales']
+      print(sales_2022_electronics)  # Output: 250
+
+      # Accessing all sales for specific year
+      sales_2021 = df.loc['2021']
+      print(sales_2021)
+
+      # Aggregating sales data across categories or yeas
+      total_sales_per_year = df.groupby(level='Year').sum()
+      print(total_sales_per_year)
+
+```
+
+<br><br>
+<h4>Query method</h4>
+This offers <code>SQL</code> like syntax for querying data frames.<br>
+It allows you to express a query in a more readable  and more easy to understand.
+<h6>Example</h6>
+<br>
+
+```python
+
+    # Sample DataFrame
+    import pandas as pd
+
+    data = {
+        'Employee_ID': [101, 102, 103, 104, 105],
+        'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],
+        'Performance_Rating': ['Excellent', 'Good', 'Excellent', 'Average', 'Excellent'],
+        'Projects_Completed': [6, 3, 7, 2, 8]
+    }
+
+    df = pd.DataFrame(data)
+
+    # Using the query() method to filter data
+    excellent_employees = df.query("Performance_Rating == 'Excellent' and Projects_Completed > 5")
+
+    print(excellent_employees)
+
+
+```
+
+<br>
+Using <code>query()</code> can be more efficient in terms of performance for certain operations
+<br>
+
+<h4>Best practices for indexing</h4>
+👉 Choose the right method: know labesl? <code>.iloc</code> & <code>.loc</code>, single values and lightening fast? <code>.at</code> & <code>.iat</code><br>
+👉 Chaining for efficiency: chain multiple methods for more concise and readable code. Pandas allows it<br>
+👉 Clarity over cleverness: prioritize core readability, think of others reading your code<br>
+👉 Handle missing data: use methods like <code>.fillna()</code> or <code>.dropna()</code> to handle <code>NaN</code> data<br>
+👉 Leverage multi-level indexing: if your data has hierarchal structure.<br>
+
+<h3>Loading and inspecting datasets in pandas</h3>
+
+
 
 
 
