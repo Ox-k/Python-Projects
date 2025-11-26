@@ -1209,11 +1209,11 @@ This is where <code>axis</code> comes in handy <br>
 ```
 
 <br><br>
-‼️ This where the distinction between <code>filter</code> and <code>query</code> is highlighted<b>
+‼️ This where the distinction between <code>filter</code> and <code>query</code> is highlighted<br>
 In query, we are dealing with rows, but filter, we are dealing with columns.
 <br>
 <h3>Handling Missing Data</h3>
-Missing values known as <b>NaN</b> are comme=on in most dataset collected.<br>
+Missing values known as <b>NaN</b> are common in most dataset collected.<br>
 Pandas provide mechanism to deal with these missing values.
 <br><br>
 
