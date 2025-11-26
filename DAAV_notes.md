@@ -988,11 +988,71 @@ Sometimes we can use data that has been stored in a list. in this case, we need 
 ```
 
 <br>
+<h6>Outcome</h6>
 <img width="373" height="129" alt="image" src="https://github.com/user-attachments/assets/c2e4e535-11fe-4486-8528-4194b9680cfc" />
+<br><br>
+<h3>Working with other file formats</h3>
+Python offers function to read other file types.<br>
+<h6>Example</h6>
+
+```python
+      pd.read_csv('csv_file.csv')
+      pd.read_excel('excel_file.xsls')
+      pd.read_json('json_file.json')
+      pd.read_sql('sql_file.sql')
+
+```
+
+<br><br>
+<h3>Inspecting DataFrame</h3>
+This is a way of exploring the contents in a <code>DataFrame</code> after creating one <br>
+This is crucial when you want a quick glance at the content and the nature of your data
+<br>
+Display the first <q>default 5</q> rows of the table
 <br>
 
+```python
+      df.head()
 
+```
+<br>
+Display the last <q>default 5</q> rows of the table/dataset
+<br>
 
+```python
+      df.tail()
+
+```
+<br>
+Display the dimension of the dataframe, i.e, number of rows and columns
+<br>
+
+```python
+      df.shape()
+
+```
+
+<br>
+Generate a summary of the dataframe, <q>column</q> names, <q>data types</q> contained int eh dataframe<br>
+presence of missing values.
+⁉️ This is very important and helps you to know how to use the dataset accordingly.
+<br>
+
+```python
+      df.info()
+
+```
+
+<br>
+Describe statically the dataframe, i.e; mean, median and so on .... <br>
+
+```python
+      idf.describe()
+
+```
+<br><br>
+<h3>Selecting anfd Filtering the DataFrame</h3>
+Pandas are powerful at giving the ability to precisely control how data is accessed in a dataFrame<br>
 
 
 
