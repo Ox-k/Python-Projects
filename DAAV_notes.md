@@ -852,7 +852,35 @@ Using <code>query()</code> can be more efficient in terms of performance for cer
 👉 Leverage multi-level indexing: if your data has hierarchal structure.<br>
 
 <h3>Loading and inspecting datasets in pandas</h3>
+Suppose you have a <code>.csv</code> file that contains dtaa of cars. It could look like:
+<br>
+<code>cars.csv</code>
+<br>
 
+```yml
+      Car_Name,Year,Selling_Price,Present_Price,Kms_Driven,Fuel_Type,Seller_Type,Transmission,Owner
+      Toyota0,2014,3.35,5.59,27000,Petrol,Dealer,Manual,0
+      Toyota1,2014,3.35,5.59,27000,Petrol,Dealer,Manual,0
+      Toyota2,2014,3.35,5.59,27000,Petrol,Dealer,Manual,0
+      Toyota3,2014,3.35,5.59,27000,Petrol,Dealer,Manual,0
+      Toyota4,2014,3.35,5.59,27000,Petrol,Dealer,Manual,0
+      .... and so on.....
+
+```
+
+<br><br>
+Note: In the data above, the fist row represent the <code>Headers</code> of the columns. <br>
+Note that at the end of the row, on the last value, there is no comma, that is because that is the end of the row<br>
+Next line represent the end of the column.<br>
+First, we need to bring in Pandas module, it like a swiss knife
+<br>
+
+```python
+      import pandas as pd
+
+```
+<br><br>
+Then we need to use the <code>.read_csv</code> to read our <code>.csv</code> file<br>
 
 
 
