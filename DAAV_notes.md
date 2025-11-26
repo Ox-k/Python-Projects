@@ -993,7 +993,7 @@ Sometimes we can use data that has been stored in a list. in this case, we need 
 <br><br>
 <h3>Working with other file formats</h3>
 Python offers function to read other file types.<br>
-<h6>Example</h6>
+<h6>Example</h6><br>
 
 ```python
       pd.read_csv('csv_file.csv')
@@ -1009,7 +1009,7 @@ This is a way of exploring the contents in a <code>DataFrame</code> after creati
 This is crucial when you want a quick glance at the content and the nature of your data
 <br>
 Display the first <q>default 5</q> rows of the table
-<br>
+<br><br>
 
 ```python
       df.head()
@@ -1017,7 +1017,7 @@ Display the first <q>default 5</q> rows of the table
 ```
 <br>
 Display the last <q>default 5</q> rows of the table/dataset
-<br>
+<br><br>
 
 ```python
       df.tail()
@@ -1025,7 +1025,7 @@ Display the last <q>default 5</q> rows of the table/dataset
 ```
 <br>
 Display the dimension of the dataframe, i.e, number of rows and columns
-<br>
+<br><br>
 
 ```python
       df.shape()
@@ -1036,7 +1036,7 @@ Display the dimension of the dataframe, i.e, number of rows and columns
 Generate a summary of the dataframe, <q>column</q> names, <q>data types</q> contained int eh dataframe<br>
 presence of missing values.
 ⁉️ This is very important and helps you to know how to use the dataset accordingly.
-<br>
+<br><br>
 
 ```python
       df.info()
@@ -1044,18 +1044,124 @@ presence of missing values.
 ```
 
 <br>
-Describe statically the dataframe, i.e; mean, median and so on .... <br>
+Describe statically the dataframe, i.e; mean, median and so on .... <br><br>
 
 ```python
       idf.describe()
 
 ```
 <br><br>
-<h3>Selecting anfd Filtering the DataFrame</h3>
+<h3>Selecting and Filtering the DataFrame</h3>
 Pandas are powerful at giving the ability to precisely control how data is accessed in a dataFrame<br>
+After running any of the methods above that describte the data set, you will have the exact headers <br>
+of the dataframe.<br>
+You can then use these headers to retrieve information as needed
+<br>
+<b>Single column selection</b>: <br>
+This is when we want to select a single column of the table/dataframe
+<br><br>
 
+```python
+      # this return the values... not in table format
+      df['column_header']
 
+      # this returns the values as a dataframe ... in a table format
+      df[['column_header']]
 
+```
+
+<br><br>
+
+<b>Mutliple column selection</b>: <br>
+This is when we want to select a portion of the data frame but specific columns
+<br><br>
+
+```python
+      df[['first_header', 'second_header']]
+
+```
+
+<br><br>
+So far the methods above are used to select <b>columns</b>. For rows, we use indexing<br>
+We can selecting rows based on their index labels using a function that we saw earlier<br>
+<br><br>
+
+```python
+      df.loc[index_of_interrest, 'column_header']  # returns a single cell
+      df.lov[index_of_interrest']    # returns an entire row
+
+```
+
+<br><br>
+So if we want to see the row at position 10, we would input 11 as the index.
+<h6>Example</h6>
+<br><br>
+
+```python
+      df.loc[11]
+
+```
+
+<br><br>
+We can also select a specific number of row, not necessarily the index, simply the integer position<br>
+Note that indexing and integer position all start at 0 as the first item returned.
+<br>
+<h6>Example</h6>
+<br><br>
+
+```python
+      df.iloc[6] # returns row 7
+
+```
+
+<br><br>
+<b>Filtering data</b>
+This is done using boolean indexing
+<br>
+This is done by creating a boolean mask of <code>True</code> or <code>False</code> by <br>
+applying one or more logical comparison to one or more columns. This will return the columns <br>
+with the rows that meet the conditions.
+<h6>Example</h6>
+<br><br>
+
+```python
+      # filter rows where 'Age' is greater than 25
+      df[df['Age'] > 25]
+
+      # Note ⚠️: the innner 'df['Age'] > 25, will rwo-filter and return a series of true/false value list
+      # Where as df['header'] is row column selection
+
+```
+
+<br><br>
+Here is another example where we can apply multiple filters on a dataframe<br>
+Suppose that we want to filter all people in our dataframe who meet these conditions<br>
+<li>Above 30</li>
+<li>From Los Angeles</li>
+<br> and we want to return various attributes of users in form of a dataframe
+<br>
+<h6>Example</h6>
+<br><br>
+
+```python
+      # return names and ages of users whose age > 30 and are from los-angeles
+      # return them as a dataframe
+      df[df['age'] > 30]][df['city' == 'los-angeles'][['name','age']]] ❌
+
+      # this could also be written as
+      df.loc[(df['age'] > 30) & (df['city'] == 'los-angeles'), [['name', 'age']]] ✅
+
+      # 📝 you can also extract a condition and give it a name for cleaner code
+      # example:
+      mask = (df['age'] > 30) & (df[ ... condition]) & .. so on 
+
+      # return the name and city of users whose age is above 30 as a data frame
+      df[df['age'] > 30][['name', 'city']] ✅
+
+```
+
+<br><br>
+<h3>Querrying Data</h3>
 
 
 
