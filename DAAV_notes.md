@@ -1162,6 +1162,91 @@ Suppose that we want to filter all people in our dataframe who meet these condit
 
 <br><br>
 <h3>Querrying Data</h3>
+Using <code>qury()</code> helps makes the code more <code>SQL</code> like and readable thats all.<br>
+The structure is : 
+<br><br>
+
+```yml
+      df.query("condition")[return values or dataframe]
+
+      📝 you can use legural selectors such as : & >=, <= !=
+      📝 you can also use natural language such as: and, or, in, not in, not
+      String matching: "city.str.contains('sub-string')
+      reference: define a variable and refer to it as @variable. e.g: age = 30, "20> @age"
+      Arithmatic operations works the same too as in python
+
+```
+
+<br><br>
+
+Filtering data can also extend to looking up data in a dataframe using indeces.<br>
+When you create a dataframe off a dataset, they are indexed from 0.<br>
+Therefore, you can specify a condition to filter a dataframe using indeces
+<h6>Example</h6>
+<br><br>
+
+```python
+      # return rowns starting from 41 ....
+      df.query("index > 40")
+
+```
+
+<br><br>
+Query returns rows, btu sometimes we want to return <b>columns</b>
+<br> 
+This is where <code>axis</code> comes in handy <br>
+<h6>Example</h6>
+<br><br>
+
+```python
+
+      # return the columns whose name contains "value_in_dataframe"
+      df.filter(regex="values_in_dataframe", axis=1)
+
+      # then you can qury rows on that
+      df.filter(regex="...", axis=value).query("condition")
+
+```
+
+<br><br>
+‼️ This where the distinction between <code>filter</code> and <code>query</code> is highlighted<b>
+In query, we are dealing with rows, but filter, we are dealing with columns.
+<br>
+<h3>Handling Missing Data</h3>
+Missing values known as <b>NaN</b> are comme=on in most dataset collected.<br>
+Pandas provide mechanism to deal with these missing values.
+<br><br>
+
+```python
+      # returning a series of boolean values for missing values of a certain header
+      df['header'].isnull()
+
+      # Generating a boolean dataframe to mirror an original missing value.
+      # Missing: true
+      # Not missing: false
+      # This could be useful when we are filling a table with a dataset and fill true or false if value is missing
+      df.isnull()
+
+      # removes rows containing any missing values
+      df.dropna()
+
+      # replacing missing values with a specific placeholder value
+      df.fillna(value)
+
+    # imputing missing values in a column with its mean while conserving memory
+    # inplace=True: means modify the existing dataframe directly instead of creating and returning a copy
+    df['age'].fillna(df['age'].mean(), inplace=True)
+    # Or a better approach
+    df = df.fiilna(df.mean())   # RECOMMENDED ✅
+
+```
+
+<br><br>
+<h3><code>TO BE CONTINUED.....</code></h3>
+
+
+
+
 
 
 
