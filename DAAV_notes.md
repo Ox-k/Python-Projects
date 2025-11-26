@@ -882,6 +882,119 @@ First, we need to bring in Pandas module, it like a swiss knife
 <br><br>
 Then we need to use the <code>.read_csv</code> to read our <code>.csv</code> file<br>
 
+```python
+      dataset = pd.read_csv("cars.csv")
+
+```
+
+<br><br>
+What this does it, it pulls the data from the file and organise it in a structured format so that you can used it.<br>
+Then we have functions like: <br>
+Showing a few initial portion of the table
+
+```python
+      dataset.head()
+
+```
+<br><br>
+Showing the information that is contained in the table such as <br>
+<li>data types used</li>
+<li>column names</li>
+<li>memory usage</li>
+...and so on...
+<br>
+
+```python
+      dataset.info()
+
+```
+
+<br><br>
+Then we can also see an overview <code>statistics</code> of the data<br>
+
+```python
+      dataset.describe()
+
+```
+
+<br><br>
+This will show information of each numerical content such as the:
+<li>Mean</li>
+<li>Standard Deviation</li>
+<li>Min</li>
+<li>Max</li>
+<li>Percentiles such as: 25%, 50% and 75%</li>
+<li>Count</li>
+<br> 
+<h3>Data transformation</h3>
+This including:<br>
+
+```yml
+      merging .... pd.merge()
+      concantenating ...pd.concat()
+      sorting ....df.sort_Value()
+      grouping ....df.groupby()
+      aggregating ...df.agg()
+
+```
+
+<br><br>
+<h3>Creating and Inspecting DataFrames</h3>
+Python offers a <code>DataFrame</code> data structure that transforms data into neat <code>Rows</code> and <code>Columns</code>
+<br>
+Coupled with <code>Dictionaries</code>, dictionaries are ideal for structured data, where:
+<br>
+<code>Keys</code>: represent the columns<br>
+<code>Values</code>: represent the corresponding column data
+<br>
+<h6>Example</h6>
+Int his example, we use a <code>dictionary</code>, where <code>keys</code> and explicitly column headers and the rest is <br>
+column data<br>
+
+```python
+      # bring in the pandas library
+      import pandas as pd
+
+      # Define data .... a dictionary in this example
+      data = {'Name': ['alice','bob','charlie'], 'Age':[25,30,28]}
+
+      # transform it into a dataframe ... structual with rows and columns
+      df = pd.DataFrame(data)
+
+      # in jupyter, this prints out a formatted table
+      df
+
+```
+
+<br>
+<h6>Outcome</h6>
+<img width="231" height="123" alt="image" src="https://github.com/user-attachments/assets/0e4d77d1-9831-43a9-8ac0-5b80b17d16a4" />
+<br>
+<br>
+Sometimes we can use data that has been stored in a list. in this case, we need to define the headers of our columns
+<h6>Example</h6>
+<br>
+
+```python
+      import pandas as pd
+
+      # This is a list of lists
+      data = [['alice',6],['bob',89],['charlie',25]]
+
+      # we create a dataframe and dictate what the headers are going to be
+      df = pd.DataFrame(data, columns=['Label','Count'])
+      df
+
+```
+
+<br>
+<img width="373" height="129" alt="image" src="https://github.com/user-attachments/assets/c2e4e535-11fe-4486-8528-4194b9680cfc" />
+<br>
+
+
+
+
+
 
 
 
