@@ -1242,12 +1242,114 @@ Pandas provide mechanism to deal with these missing values.
 ```
 
 <br><br>
-<h3><code>TO BE CONTINUED.....</code></h3>
+<h5>Other data transformation methods.....</h5>
+<code>SORTING</code><br>
+This is done by <code>df.sorted_values()</code><br>
+<h6>Example</h6>
+<br><br>
+
+```python
+
+      df..sorted_values(by="column header here", ascending=False/True 👈 optional)
+
+```
+
+<br><br>
+Applying custom functions to dataframes
+<h6>Example</h6>
+<br><br>
+
+```python
+
+      # define a function
+      def calculate_discount(sales):
+          return sales * 0.9
+
+      # then you can apply it do a data transformation
+      df["Discounted_Sales"] = df["sales"].apply(calculate_discount)
+
+      # print the dataframe returned
+      print(df.head())
+
+```
+
+<br><br>
+Creating a pivot table
+<h6>Example</h6>
+Given a dataframe with many columns and rows but among them are: <br>
+<code>regions</code><br>
+<code>products</code><br>
+<code>sales</code><br><br>
+And you want a table where<br>
+rows = <code>regions</code><br>
+columns = <code>products</code><br>
+cells contains = <code>total sales</code>
+<br><br>
+
+```python
+
+      df_pivot_table = df.pivot_table(
+                index="column desired",
+                columns="specific column desired",
+                 values = "same logic"))
+
+      #example
+      df_pvt = df.pivot_table(
+          index = "regions",    # if more thatn 1 index, enclose them in 👉 []
+          columns = "products",
+          values = "sales",
+          aggfunc = "sum"    #all all them together at the last row
+      )
+
+```
+
+<br><br>
+
+Then we call the cleaning methods such as <code>.fillna(0)</code> or <code>.dropva()</code> to clean table.
+<br>
+Concatenating dataframes
+<br>
+Suppose that we have the following dataframes
+<h6>Example</h6>
+<br><br>
+
+```python
+
+    df1 = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})
+    df2 = pd.DataFrame({'C': [5, 6], 'D': [7, 8]})
+
+    #if we call:
+    df_concatenated = pd.conact([df1, df2])
+
+```
+<br>
+This will created a a new table with the two data stacked together as a single table
+<br><br>
+
+|  |A|B|
+|:-|:-|-:|
+|0|1|3|
+|1|2|4|
+|0|5|7|
+|1|6|8|
 
 
+<br><br>
+Merging dataframes<br>
+This is when we want to marge two dataframes based on a shared or common column
+<h6>Example</h6>
+<br><br>
 
+```python
 
+      df1 = pd.DataFrame({'key': [values in here ], .... more ....})
+      df2 = pd.DataFrame({'key': [exactly in here], .... more ....})
 
+      # then call the method to cancat
+      dg_merged = pd.merge(df1, df2, on="key")
+```
+
+<br><br>
 
 
 
