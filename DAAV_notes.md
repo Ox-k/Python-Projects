@@ -1581,4 +1581,55 @@ To this:
 
 <br><br>
 
+<h3>Aggregation and summarization</h3>
+This is when we condense data by applying calculation on a group of data in a dataframe's rows or columns
+<br>
+We use:<br>
+<code>groupby</code>
+<br> function in pandas to group data based on one or more columns, creating a group object<br>
+and then chain any of these methods to obtain desired results
+<h6>Example</h6>
+<br><br>
 
+```python
+
+     .sum()
+     .mean()
+     .count()
+     .min()
+     .max()
+
+     # there are other statistical methods that are used for various purposes
+
+```
+
+<br><br>
+
+<h3>Merging and Joining</h3>
+<code>join</code> works like merge, but it combines dataframes based on indeces. <br>
+This is particulary useful when you want to combine Dataframes with hierarchail indices or row labels
+
+<h6>Example</h6>
+<br><br>
+
+```python
+
+      import pandas as pd
+
+      # Create two DataFrames
+      employees = pd.DataFrame({'EmployeeID': [1, 2, 3], 'Name': ['Alice', 'Bob', 'Charlie']})
+      departments = pd.DataFrame({'DepartmentID': [1, 2, 3], 'Department': ['HR', 'IT', 'Finance']})
+
+      # Set EmployeeID as the index for the join
+      employees.set_index('EmployeeID', inplace=True)
+      departments.set_index('DepartmentID', inplace=True)
+
+      # Join the DataFrames
+      combined = employees.join(departments)
+      print(combined)
+
+```
+
+<br><br>
+
+<code>to be continued .... </code>
