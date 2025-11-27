@@ -1423,7 +1423,12 @@ Pandas also offer the method below to make all values in the column the same typ
 
 ```python
 
-      df.astype()
+      import pandas as pd
+      data = {'Age' :['23', '12', '56', 89, 23.56]}
+      df = pd.DataFrame(data)
+
+      # convert the data into an integer
+      df['Age'] = df['Age'].astype(int)
 
 ```
 
@@ -1433,8 +1438,11 @@ Pandas also have method to remove duplicates in data that may skew the conclusio
 <br><br>
 
 ```python
+      import pandas as pd
+      data = {'Scores': [1,1,2,2,3,3,4,4,5,5]}
 
-      .drop_duplicates()
+      df = pd.DataFrame(data)
+      unique_scores = df.drop_duplicates()
 
 ```
 
@@ -1524,6 +1532,53 @@ The resulting out come is: <br><br>
 |B|Mar|180|
 
 <br><br>
+<h5>Stack and Unstack</h5>
+<code>stack</code> is used to pile up data vertically <br>
+<code>unstack</code> is used to spread the data horizontally<br>
+Assentially what this does is turn this 👇🏼
+<br><br>
 
+|product|jan|feb|
+|:------|:--|--:|
+|a|100|150|
+|b|200|250|
+|c|300|350|
+
+<br><br>
+By 
+<h6>Example</h6>
+<br><br>
+
+```python
+
+      import pandas as pd
+      data = {'product': ['a'','b','c'],
+              'jan':[100, 200, 300],
+              'feb': [150, 250, 350]
+      }
+
+      # stacking the dataframe
+      df = pd.DataFrame(data)
+      stacked = df.set_index('product').stack()
+
+      # to unstack them
+      stack.unstack()
+
+```
+
+<br><br>
+To this:
+<br><br>
+
+|product| | |
+|:------|:-|-:|
+|a|jan|100|
+| |feb|150|
+|b|jan|200|
+| |feb|250|
+|c|jan|300|
+| |feb|350|
+
+<br><br>
 
 
