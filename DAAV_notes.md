@@ -1028,7 +1028,7 @@ Display the dimension of the dataframe, i.e, number of rows and columns
 <br><br>
 
 ```python
-      df.shape()
+      df.shape
 
 ```
 
