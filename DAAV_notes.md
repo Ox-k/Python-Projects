@@ -1350,6 +1350,180 @@ This is when we want to marge two dataframes based on a shared or common column
 ```
 
 <br><br>
+<h3>Exploratory Data Analysis</h3>
+Becoming a data detective to uncover hidden anomalies.<br>
+Cleaning data is such a crucial step in data analysis. when your data is clean of errors, it<br>
+provides accurate and reliable insights that can be used to un-hide alot<br>
+<h6>Example</h6>
+<br><br>
+
+```yml
+
+      Imagine you have a dataset of customers information and their
+      purchasing behaviour. And the customer information contains details like
+      thier:
+        names
+        address
+        emails
+      You may decide to send markeing emails to your custmer offering varioys customazied
+      discounts. if there is a typo in emails, you might end up sending the marketing
+      email to the wrong customers.
+
+```
+
+<br><br>
+Cleaned data:
+<ul>
+  <li>Enahnces the accuracy and reliability of your analysis</li>
+  <li>Helps identify and troubleshoot issues</li>
+  <li>Facilitate the development of features</li>
+  <li>Support data-driven decision making</li>
+  <li>Promotes effective communication and collaboration</li>
+</ul>
+<br>
+
+<h6>Ways to clean data</h6>
+<ul>
+  <li>Indentify and nderstand your data</li>
+  <li>Look for missing values</li>
+  <li>Address inconsistencies and errors in your data</li>
+  <li>Transform and aggregate the data as needed</li>
+  <li>Validate and verify the cleaned data</li>
+</ul>
+
+<h3>Data Cleaning Tactics</h3>
+Pandas provide function like the one below to fill missing values with <br>
+specified value as a replacement.
+<br><br>
+
+```python
+
+      pandas.DataFrame({...data ...}).fillna(placeholder_Value)
+
+```
+
+<br><br>
+Or you can remove the entire row that is missing values using:
+
+<br><br>
+
+```python
+
+      df.dropna()
+
+```
+
+<br><br>
+Sometime you have the data but it is inconsistent in some dataset.<br>
+This data could have different data formats ir varying units of measurements
+<br>
+To correct this, we can define a <code>regular expression </code> to standardize formats.<br>
+Pandas also offer the method below to make all values in the column the same type:
+<br><br>
+
+```python
+
+      df.astype()
+
+```
+
+<br><br>
+Pandas also have method to remove duplicates in data that may skew the conclusion
+
+<br><br>
+
+```python
+
+      .drop_duplicates()
+
+```
+
+<br><br>
+<h6>Data Reshaping and Transformation</h6>
+This is when we <code>re-arrange/modify</code> the structure of the data to meet specific requirements
+<br>
+<h6>Example</h6>
+Creating <code>pivot_table</code> to summerize the data based on one or more index columns<br>
+This is useful when you want to <code>aggregate data across different dimensions</code>
+<br><br>
+
+```python
+
+      df.pivot_table(index=["...", " ..." ], columns=["...", "..."], values=["...", "..."])
+
+```
+
+<br><br>
+
+<code>melt()</code> undoes what <code>pivot_tables()</code> does.<br>
+It converts data from a wide dataframe to a long dataframe by turning rows into columns.
+<h6>Example</h6>
+Suppose you have this data: <br><br>
+
+|product|Jan|Feb|Mar|
+|:------|:--|:--|--:|
+|A|100|150|200|
+|B|120|130|180|
+
+<br><br>
+And you want to convert it into a vertical table. Applying <code>.melt()</code> function as this 👇🏼
+<h6>Example</h6>
+<br><br>
+
+```python
+
+      import pandas as pd
+
+      # Create a dataframe
+      data = {
+          'Product': ['A', 'B'],
+          'Jan': [100, 200],
+          'Feb': [150, 130],
+          'Mar': [200, 180]
+      }
+
+      # create a data frame
+      df = pd.DataFrame(data)
+
+      # Melt the data to reshape the DataFrame
+      melted_df = pd.melt(df, id_vars=['Product'], var_name='Month', value_name='Sales')
+
+    """
+      Note the general structure of a melt() function:
+      pandas.melt(
+              dataframe,
+              id_var=[axis name already in the dataframe],
+              var_name='custom column header,
+              valeu_name='custom column header'
+      )
+    """
+
+```
+
+<br><br>
+Note that these <br><br>
+```python
+
+      
+      id_vars
+      var_name
+      value_name
+
+```
+
+<br><br>
+are reserved keywords for pandas that are used with the <code>melt()</code> function.<br>
+The resulting out come is: <br><br>
+|Product|Month|Sales|
+|:------|:----|----:|
+|A|Jan|100|
+|A|Feb|150|
+|A|Mar|200|
+|B|Jan|120|
+|B|Feb|130|
+|B|Mar|180|
+
+<br><br>
 
 
 
