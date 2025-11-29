@@ -2050,7 +2050,155 @@ Here are the figure and the subplots that were created in the figure<br><br>
 
 <br><br>
 <h3>Matplotlib Library</h3>
+<h6>Mostly any plot follows these specific structure</h6>
 
+<br><br>
+
+<code>Structure</code>
+<br>
+
+```yml
+
+    1. import the matplotlib.pyplot lirbary
+    2. import numpy: this is used to create scales on a number line
+    3. define x and y number values
+    4. plot them
+    5. define the x-label and the y-label
+    6. define the title
+    7. Show the plot
+
+
+```
+
+<br><br>
+<h6>Simple line plots</h6>
+<br><br>
+Corner store for data visualisation to show a series or trends in data changes<br>
+<h6>Example</h6>
+<br>
+
+```python
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    x = np.linespace(start, end, step)
+    y = np.linspace(start, end, space)
+    plt.plot(x,y)
+    plt.xlabel('label of x-axis')
+    plt.ylabel('label of y-axis')
+    plt.title('title of the plot')
+    plt.show()
+
+```
+
+<br><br>
+
+<h6>Scatter plots: unvailing relationships and correlation</h6>
+They are used to reveal the relationshop and colleration between two numerical variables<br>
+Things like, study-time vs score over a period of time
+
+<br><br>
+
+<h6>Example</h6>
+<br>
+
+```python
+
+  import matplotlib.pyplot as plt
+  import numpy as np
+  ages = np.lispace(start, end, step)
+  income = ages * 500 + np.random.normal(0, 10000, 100)  # for explaination purpose
+  plt.scatter(ages, icome)
+  plt.xlabel('Label name')
+  plt.ylabel('Label name')
+  plt.title('title of the plot')
+  plt.show()
+
+
+```
+
+<br><br>
+<h6>Bar Charts: Comparing values across vategories</h6>
+This is used when we have varioys categories of data and we comparing a single variable that they have common
+<br><br>
+
+<h6>Example</h6>
+<br>
+
+```python
+    import matplotlib.pyplot as plt
+    categories = ['product A', 'product B', 'product C', 'product D']
+    values = [1500, 2300, 1200, 30000]
+
+    plt.bar(categories, values)
+    plt.xlabel('lanel')
+    plt.ylabel('label')
+    plt.title('title')
+    plt.show()
+
+```
+
+<br><br>
+<h6>Histograms: Visualzing data distribution</h6>
+This is useful when we want to see the distribution of the same data collecred overtime
+<br><br>
+
+<h6>Example</h6>
+<br>
+
+```python
+
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    # generate sample random values
+    data = np.random.randn(10000)  # generate a 1000 random value numbers
+    plt.hist(data, bins=30)  #a histgram ith 30 bins
+    plt.xlabel('axis name')
+    plt.ylabel('y label name')
+    plt.title('title')
+    plt.show()
+
+```
+
+<br><br>
+<h6>Pie Chars: showcasing the proportions and percentages in data</h6>
+This is useful when we are analysing the proportion share of a data in a dataset
+<br><br>
+
+<h6>Example</h6>
+<br>
+
+```python
+
+  import matplotlib.pyplot as plt
+  labels = ['...', '....']
+  sizes= [ %-size of each data]
+  plt.pie(sizez, labels=name_of_lables☝️, autopct='%1.1f%%')  # shows % of each slice
+  plt.title(' title ')
+  plt.show()
+
+
+```
+
+<br><br>
+<h6>Matplotlib extensive customization</h6>
+we can further customize : <br>
+<ul>
+  <li><code>Colors</code>: fine tune the colors as we please</li>
+  <li><code>Makers</code>: choose from various markers to represent data points in scatter and lile=ne plots</li>
+  <li><code>Line styles</code>: solid, dashed, dotted, colors</li>
+  <li><code>legends</code>: a clear and informative legend to explain the elements better</li>
+  <li><code>Annotations</code>: include text annotations to highlight specific data points of interrest</li>
+  <li><code>3D plotting</code>: to represent complex data</li>
+  <li><code>Animations</code>: generate dynamic visulations to illustrate trends</li>
+  <li><code>Interractive plots</code>: plots that respond to users interractions</li>
+</ul>
+
+  
+
+  
+  
 
   
 
