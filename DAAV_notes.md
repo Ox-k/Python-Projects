@@ -1631,5 +1631,211 @@ This is particulary useful when you want to combine Dataframes with hierarchail 
 ```
 
 <br><br>
+<h3>Identifying and handling missing data</h3>
+<br>
+When approaching a dataset with missing data<br>
+<code>How much data is missing</code><br>
+Is it a lot a few details here and there such that if they are deleted,<br>
+this will not skew the result the data represent?<br>
+<code>The type of data that is missing.</code><br>
+Is this a must have data or optional<br>
+<code>The purpose of the data missing</code><br>
+Is this a response to a question that users are skipping or are users sparsely not answering<br>
+
+<h5>Handling the missing values</h5>
+<code>Imputation: </code> <br> filling in missing values with calculated values such as mean, median
+<br>Regression analysis imputation predicts missing variables based on existing data 
+<br>Multiple imputations involves creatign multiple imputed values, each with different values <br>
+for the missing data.<br>
+
+<code>Deletion</code> <br>
+This is straight forward deleting rows that are missing data
+<br>
+<code>Create a category for the missing values </code>
+<br>
+<code>Collect more data to hit all the points</code>
+<br>
+<code>Use machine learning algorithms to fill data </code> .... not necessarily imputed data <br>
+
+<h5>Handling Duplicates</h5>
+Debloating data. <br>
+These dups happen due to human errors when entering the data, merging data, or software bugs!
+<br>
+To handle this, python <code>pandas</code> have a tool just for that called <code>.duplicated()</code><br>
+that is chained on the data.
+<br>
+In addition to this, you can prevent duplicates right at the stage of data input and using unique id in a database.<br>
+This is called <code>Data Validation</code>
+
+<h6>Example</h6>
+<br><br>
+
+```python
+
+      import pandas as pd
+
+      data = pd.read_csv('data_file.csv')
+      duplicates = data.duplicated()
+
+      # you can access individual rows as follows and drop them
+      duplucate_rows = data[data.duplicated()]
+      data = data.drop_duplicates()
+
+      # keeping the duplicated
+      data = data.drop_duplicates(keep='last')  #keeps the last occurence of each duplicate
+
+      # keep the first occurence of each duplicate (default)
+      data = data.drop_duplicates(keep='first')
+
+      # Remove all duplicate rows
+      data = data.drop_duplicates(keep=False)  #True ... is the default
+
+```
+
+<br><br>
+
+<h5>Addressing missing data</h5>
+The initial step in managing missig data is to pinpoitn its location in a dataset.<br>
+Pandas offers <code>.notnull()</code> and <code>.isnull()</code> to create boolean marks. <br>
+These marks highlight the missing values in the dataframe.
+<br>
+<code>When to remove the missing rows</code>: <br>
+This is when the missing data is small and appears to be random. Pandas offer <code>.dropna()</code>
+<br> to romove these rows or columns.<br>
+
+<h5>Handling outliers</h5>
+Using panads <code>describe()</code> and  <code>.quantile()</code> along with visualization tools <br>
+helps to see the nature of the data and identifiers outliers, deciding if they are needed or not. <br>
+
+<h5>Conversion of data types</h5>
+Sometimes when there is a mismatch in data format in columns, this can be corrected using: <br>
+<code>.astype()</code>, <code>.to_numeric()</code> and <code>.to_datetime()(</code> allowing handling of potential errors.
+<br>
+
+<h6>Working through an example</h6>
+Lets imitate a sample data frame with missing values
+<br><br>
+<h6>import data analysis tools</h6>
+<br>
+
+```python
+
+      import pandas as pd
+      import numpy as np
+
+
+```
+
+<br><br>
+<h6>Create a sample dataframe with missing values</h6>
+
+<br>
+
+```python
+
+     data = {
+         'Name' : ['Alice', 'Bob', np.nan, 'David'],
+         'Age' : [20, 30, np.nan, 35],
+         'City' : ['New York', np.nan, 'London', 'Paris']
+     }
+     df = pd.DataFrame(data)
+
+```
+
+<br><br>
+<h6>Identifying missing values using pandas</h6>
+<br>
+
+```python
+      # remember, at this point we have a table
+      print('Missing value counts per column:\n', df.isnull().sum()
+
+```
+
+<br><br>
+
+<h6>Removing missing values from the dataframe</h6>
+<br>
+
+```python
+
+     df_dropped = df.dropna()
+     print('\nDataFrame after dropping rows with any missing values:\n', df_dropped)
+
+```
+
+<br><br>
+
+<h6>Imputing or replacing the missing values with the mean (for numerical columns only)</h6>
+<br>
+
+```python
+
+      df_fiiled_mean = df.fillna(df.mean(numeric_only=True))
+      print('\nDataFrame after filling missing 'Age' with the mean:\n', df_filled_mean)
+
+```
+
+<br><br>
+
+<h6>Imputing with the median (for numerical columns only)</h6>
+<br>
+
+```python
+
+      df_filled_median = df.fillna(df.median(numeric_only=True))
+      print("\nDataFrame after filling missing 'Age' with median:\n", df_filled_median)
+
+```
+
+<br><br>
+
+<h6>Handling outliers (demo with age), assume 40+ is an outlier</h6>
+<br>
+
+```python
+
+      df['Age_capped'] = df['Age'].clip(upper=40)
+      print("\nDataFrame with age capped at 40:\n", df)
+
+```
+
+<br><br>
+
+<h6>Data type conversion</h6>
+<br>
+
+```python
+      # convert to numeric and handle errors
+      df['Age'] = pd.numeric(df['Age'], = errors='coerce')
+      print("\nData types after conversion:\n", df.dtypes)
+
+```
+
+<br><br>
+
+<h6>Group by some condition and aggregate</h6>
+<br>
+
+```python
+
+      grouped_data = df.groupby('City')['Age'].mean()
+      print("\nAverage age by city:\n", grouped_data)
+
+```
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+  
 
 <code>to be continued .... </code>
