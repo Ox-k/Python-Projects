@@ -1831,8 +1831,41 @@ Lets imitate a sample data frame with missing values
 (see notes earlier....😊)
 
 <h2 align="center">Data Visualization </h2>
+This is the process of transforming raw data into visual representations such as charts and graphs.
+<br>
+<br>
+<h6>Real life areas where visualization is used:</h6>
+<code>Business</code>
+<br>
+tracking how the business is doing in sales over time, employee performance and areas of improvememts
+<br>
+<code>Science</code>
+<br>
+Simulation of natural disasters, tracking spread of diseases, etc
+<br>
+<code>and so on.....</code>
+<br>
+<h6>Why data visualization is important</h6>
+It helps to unveil patterns and trends, spotlight outliers, facilitate comparisons, enhance communication<br>
+convey easy to understand message to non-savy individuals.
+<br>
 
+<h6>Common visualizations</h6>
+<b>Pie Chart</b>: portion of the pie representes quantity proportions and dominance<br>
+These are used to represents small data representations with less segments.<br>
+Can be confusing when proportions are almost the same size.<br><br>
+<b>Bar Charts</b>: Handle a range of data types with clear readability<br>
+Can be come bulky if categories are to many<br><br>
+<b>Histograms</b>: group data into bins and histograms. <br>
+Ideal for summerizing and representing large data set and poin point out outliers <br><br>
+<b>Line Charts</b>: ideal for representing series data by connecting data points.
+<br>They clearly show directions and trends.
+<br>These required spaced data and no overlapping lines<br><br>
+<b>Scatter Plots</b>: idal for regression but required addition analysis to be effecient ??
+Tables: group data.<br>
 
+<h3>MatPlotLib</h3>
+Tool for reperesenting data using various data representation plots.<br>
 
 
 
