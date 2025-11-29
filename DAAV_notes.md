@@ -1866,7 +1866,189 @@ Tables: group data.<br>
 
 <h3>MatPlotLib</h3>
 Tool for reperesenting data using various data representation plots.<br>
+<br>
+<h5>Anatomy of MatPlotLib</h5>
+<h6>Figure</h6>
+serves as the overall container for your plot, providing the boundaries and context for visualization<br>
 
+<br>
+
+<h6>Example</h6>
+<br>
+
+```python
+      
+      #
+      import matplotlib.pyplot as plt
+
+      # Create a canvas
+      fig = plt.figure(figsize=(width, height))  #note that the measurements and in INCHES
+
+```
+
+<br><br>
+
+<h6>Lengend</h6>
+Decods the symbols, colors, or line styles used in the plot, helping viewers understand<br>
+the representation of different data series
+
+<br><br>
+
+<h6>Example</h6>
+<br>
+
+```python
+      
+      # import library
+      import matplotlib.pyplot as plt
+
+      x = [1,2,3]
+      y1 = [4,5,6]
+      y2 = [7,8,9]
+
+      plt.plot(x, y1, label= 'name 1')
+      plt.plot(x, y2, label = 'name 2')
+
+      plt.legend()
+      plt.show
+
+```
+<br>
+This shows something like this 👇<br><br>
+
+<img width="644" height="417" alt="Screenshot 2025-11-29 at 12 58 13" src="https://github.com/user-attachments/assets/b973e840-ce17-48e3-ad54-e950881b9c74" />
+
+<br><br>
+<h6>Customization</h6>
+Matplotlib allows extensive customization of plots, enabling users to control colors,<br> fonts and styles for better visual appeal and clarity <br>
+
+<h6>Ticks</h6>
+These are marks along the axes indicating specific values. <br>
+While tick labesl show the corresponding values, they aid in data interpretation
+<br>
+They serve a guide for interpreting the scale. <br>
+<code>Example</code>: if you want to show the <b>hourly</b> temperature readings, you customize teh <br>
+'xticks' to spread out at a 1hr interval.
+
+<br><br>
+
+<h6>Example</h6>
+<br>
+
+```python
+      import numpy as np
+
+      # get the plotting library
+      import matplotlib.pyplot as plt
+
+      # define axes values
+      x = np.linspace(0, 10, 100)    # this means linspace(start, end, evenly-spaced-points)
+      y = np.sin(x)
+
+      # set the tick locations and labesl for the x-axis
+      plt.xticks(np.arange(0,11,2), ['0', '2', '4', '6', '8', '10'])
+
+      """
+        np.arrage(start, end-1, steps) generates numbers from start inclussive, end exclussive and step counts
+        the array: ['0' .... ['10']  represents the label that will be displayed at each of thise ticks.
+      """
+
+      # Optional: rotate bales for readability
+      plt.xticks(rotation=45)
+
+      # show the plot
+      plt.show()
+
+      # ESSENTIAL WE ARE DRAWING THE SIGN CURVE
+
+```
+
+<br><br>
+This creates this 👇<br>
+
+<img width="739" height="433" alt="Screenshot 2025-11-29 at 12 58 06" src="https://github.com/user-attachments/assets/1ffa95a2-6c66-4d57-9466-15df41a699e5" />
+
+<br><br>
+
+<h6>Labels</h6>
+They provide context to the axes, clalifying what each axis represnts and enhancing understanding of the plot.
+<br>
+The <code>xlabel</code> and <code>ylabel</code> describe what each axis represents, giving meaning to the numeric scales.
+
+<br><br>
+
+<h6>Example</h6>
+<br>
+
+```python
+
+      # import the plotting library
+      import matplotlib.pyplot as plt
+
+      # define the segements on the x and y axis
+      # Note: unless specified, matplotlib will decide what the scale is
+      x = [1, 2, 3]    # this is a line that goes from x=1 ...to .... x = 4
+      y = [4, 5, 6]    # this is a line that goes from y=4 ...to .... y = 6
+
+      # Define the title of the graph
+      plt.title('title in here')
+
+      # Define the name of the x-axis
+      plt.xlabel(' name in here')
+
+      # Define the name of the y axis
+      plt.ylabel('name here')
+
+      # Show the canvas
+      plt.plot(x, y)
+
+```
+
+<br><br>
+
+
+<h6>Axes</h6>
+These are the areas within the figure where data is plotted <br>
+functioning as a grid of organising and desplaying data points<br>
+These can be nested too
+<br><br>
+
+<h6>Example</h6>
+<br>
+
+```python
+
+      # import thr matplot library
+      import matplotlib.pyplot as plt
+
+      # create a figure with 2 ROWS and 2 COLUMNS of subplots
+      fig, ax = plt.subplots(2,2)    # this reads as 👉 within the fig, plot ax
+
+      # access individual subplots using indexing
+
+      # top-left subplot
+      ax[0, 0].plot([1, 2, 3], [4, 5, 6])
+
+      # Top right subplot
+      ax[0, 1].bar(['A', 'B', 'C'], [7, 8, 9])
+
+      # Bottom left subplot
+      ax[1, 0].scatter([10, 20, 30], [11, 12, 13])
+
+      # bottom right subplot
+      ax[1, 1].hist([1, 1, 2, 3, 3, 3])
+
+      # show the plot
+      plt.show()
+
+```
+
+<br><br>
+Here are the figure and the subplots that were created in the figure<br><br>
+
+<img width="669" height="427" alt="Screenshot 2025-11-29 at 12 16 30" src="https://github.com/user-attachments/assets/dcc8b2c7-8407-4de3-8305-12aafbedd9d0" />
+
+<br><br>
 
 
   
