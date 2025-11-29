@@ -2195,7 +2195,7 @@ we can further customize : <br>
   <li><code>Interractive plots</code>: plots that respond to users interractions</li>
 </ul>
 
-  
+<br><br>
 
   
   
