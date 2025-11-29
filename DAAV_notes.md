@@ -2049,6 +2049,7 @@ Here are the figure and the subplots that were created in the figure<br><br>
 <img width="669" height="427" alt="Screenshot 2025-11-29 at 12 16 30" src="https://github.com/user-attachments/assets/dcc8b2c7-8407-4de3-8305-12aafbedd9d0" />
 
 <br><br>
+<h3>Matplotlib Library</h3>
 
 
   
