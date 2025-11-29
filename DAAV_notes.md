@@ -1826,11 +1826,11 @@ Lets imitate a sample data frame with missing values
 
 <br><br>
 
+<h3>Data Cleaning</h3>
+<h6>Taming messy data with pandas</h6>
+(see notes earlier....😊)
 
-
-
-
-
+<h2 align="center">Data Visualization </h2>
 
 
 
