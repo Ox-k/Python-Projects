@@ -2196,9 +2196,112 @@ we can further customize : <br>
 </ul>
 
 <br><br>
+<h3>Choosing the right visualization library</h3>
+There are 4 pillars of visualization in python <br>
+<ul>
+  <li>Matplotlib</li>
+  <li>Apache SuperSet</li>
+  <li>Plotly</li>
+  <li>Bokey</li>
+</ul>
+<br>
+Selecting the right tool is super important
+<br>
+<h6>Matplotlib</h6>
+Prefered for high quality visuals, precise customization and flexibility.
+<br>
+<code>Matplotlib strength</code> <br>
+* <code>Flexibility</code>: grants complete control over every element of you plot
+<br>
+* <code>Publication quality output</code>: it meets rigorous standards of academic and technical publications
+<br>
+* <code>Well documented and supported</code>: Active community to provides valuable resources for <br>
+trouble shooting and idea exchange
+<br>
+* <code>Intergates well with numpy and pandas</code>: two libraries essential for numerical computation and data analysis
+<br><br>
+<code>Weakness</code> <br>
+<code>Limited interractivity of plots</code>: doesnt not offer enough support for interractivity.
+<br><br>
 
-  
-  
+<h6>Apache SuperSet</h6>
+Used to create interractive dashboards and charts. <br>
+Its not a <b>fully</b> python library that is meant to be <b>imported</b> in a python project.<br>
+It is a stand alone  application.<br>
+<br>
+<code>Strength</code><br>
+<code>Rich visualization library</code>: it versatility whic allow users to choose the most appropriate chart <br>
+type for their data. <br>
+It offeres: <br>
+<ul>
+  <li>bar charts</li>
+  <li>line charts</li>
+  <li>scatter plots</li>
+  <li>maps</li>
+  <li>heatmaps</li>
+  <li> ... and more ....</li>
+</ul>
+<br>
+<code>User friendly interface</code>: allows drag and drop interface which simplofies the process<br>
+of creating visualilzation and dashboards.
+<br>Users can apply: <br>
+<ul>
+  <li>filters to the plot</li>
+  <li>customize layout without writting code</li>
+</ul>
+<br>
+<code>Offers interractive dashboards</code>: dashboards are highly interractive.
+<br>
+<code>Scalability</code>: handles large datasets efficiently.<br>
+It has a <b>caching</b> architecture that allows fast <b>querry</b> interraction.
+<br>
+<code>Extensibility</code>: Allows for customization and extension. <br>
+Users can customize and connect to various data sources, and integrate with other tools.
+<br>
+<br>
+<code>Weakness</code> <br>
+<code>Steep learning curve</code>: Not easy to master
+<br><br>
+<h6>Plotly</h6>
+This empowers web-based visualization <br>
+Users can:
+<ul>
+  <li>Zoom around the plot</li>
+  <li>move around</li>
+  <li>hover to get more details</li>
+</ul>
+<br>
+<br>
+<code>Strength</code>
+<br>
+<code>Cross platform</code>: since its web based, it can be accessed from any platform <br>
+<br>
+<code>Weakness</code><br>
+<code>Slow on large dataset</code>: handling large dataset can be slow <br>
+<br>
+<h6>Bokeh</h6>
+Great for charts and graph that work well in websites and apps.<br>
+It handles large dataset smoothly. <br>
+<br>
+<code>Strength</code>
+<br>
+<code>Offers high-performance interractive visualization</code>: even for large datasets <Br>
+<code>Customizable widgets</code>: it has a large collection of customizable widgets.<br>
+Uses can: <br>
+<ul>
+  <li>use sliders</li>
+  <li>use drop down buttons</li>
+  <li>use buttons</li>
+  <li>... and other controls</li>
+</ul>
+<br>
+It is also, like <b>plotly</b>, server side rendering <br><br>
+<code>Weakness</code> <br>
+<code>Steeper learning curve</code>: not easy to learn<br>
+
+
+
+
 
   
 
