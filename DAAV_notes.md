@@ -2299,6 +2299,60 @@ It is also, like <b>plotly</b>, server side rendering <br><br>
 <code>Weakness</code> <br>
 <code>Steeper learning curve</code>: not easy to learn<br>
 
+<h5>Plotly Interractive Dashboards</h5>
+<code>Dash</code> is a python framework specifically designed for building interactive web applications and dashboards.
+<br>
+Its like a <code>canvas</code> where you can paint not just static images, but interractive narratives that evolve as suers explore and engage with your visualizations. <br>
+
+<h6>Dash: components and call backs</h6>
+<code>Components: </code> visual building blocks <br><br>
+
+
+```yml
+
+  Flowchart Dash components and callback interactions
+  ----------------------------------------------------
+  USER INTERACTION: user interacts with a component
+  CALLBACK TRIGGERED: call back functions are triggered by user input
+  DATA PROCESSING: data is filtered or processed based on input
+  COMPONENT UPDATED: dahs component is updated with new data
+  FEEDBACK LOOP: user can provide new inputs, restarting the cycle
+
+
+```
+
+<br><br>
+
+<h6>Strength of Dash</h6>
+<code>Pythonic seamlessness</code>: seamlessly intergrates into the python exosystem.<br>
+You can seamlessly create sophiscated dashboards without having to use a new language.
+<br><br>
+<code>Customization and aesthetics</code>: You can harness the power of <code>CSS</code> to style<br>
+your components to create a theme or visually appealing visualization.<br><br>
+<code>Flexibility and extensibility</code>: You are not confined tp specific visualization libraries. <br>
+You can use custom visualization that achieves your needs <br><br>
+<code>Deployment and sharing</code>: deploying your dashboards is easy regardless of the audience.<br>
+You can deploy the dahsboards as a stand alone or as part of the web application.<br>
+This can be des using tools like <code>Gunicorn or WSGI</code> servers that are already embeded in the browser.
+<br><br>
+
+<h6>Example: the general template of dash</h6>
+<br>
+
+```python
+
+  import matplotlib.pyplot as plt
+  labels = ['...', '....']
+  sizes= [ %-size of each data]
+  plt.pie(sizez, labels=name_of_lables☝️, autopct='%1.1f%%')  # shows % of each slice
+  plt.title(' title ')
+  plt.show()
+
+
+```
+
+<br><br>
+
 
 
 
