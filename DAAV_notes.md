@@ -2342,7 +2342,9 @@ This can be des using tools like <code>Gunicorn or WSGI</code> servers that are 
 ```python
 
   # Import Dash and components
-  from dash import Dash, html, dcc, Input, Output
+  # note: if you are using jupyiter notebooks, install dash first
+  # !pip install dash jupyter-dash
+  from dash import Dash, html, dcc, Input, Output  # here we assume that dash is installed
   import plotly.express as px
   import pandas as pd
 
@@ -2383,7 +2385,6 @@ Here is an example of a dashboard taht changes everutime a user changes dataset 
 <br>
 
 ```python
-
   from dash import Dash, html, dcc, input, Ouput
   import plotly.express as px
 
