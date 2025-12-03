@@ -2341,17 +2341,114 @@ This can be des using tools like <code>Gunicorn or WSGI</code> servers that are 
 
 ```python
 
-  import matplotlib.pyplot as plt
-  labels = ['...', '....']
-  sizes= [ %-size of each data]
-  plt.pie(sizez, labels=name_of_lables☝️, autopct='%1.1f%%')  # shows % of each slice
-  plt.title(' title ')
-  plt.show()
+  # Import Dash and components
+  from dash import Dash, html, dcc, Input, Output
+  import plotly.express as px
+  import pandas as pd
+
+  # 1. Cretae the dash app
+  app = Dash(__name__)
+
+  # 2. Layout: What the user sees
+  app.layout = html.Dic([
+      html.H1("My Dash App"),
+      dcc.Dropdown(id="my-dropdown", options=[....], value="default"),
+      dcc.Graph(id="my-graph"),
+  ])
+
+  # 3. Callback: logic connecting inputs to outputs
+  @app.callback(
+      Output("my-graph", "figure"),
+      Input("my-dropdown", "value")
+  )
+
+  def update_grapgh(selected_Value):
+      .... implementation
+      return fig
+
+  # 4. Run the app
+  if __name__ == "__main__":
+      app.run_server(Debug=True)
 
 
 ```
 
 <br><br>
+This is the structure of every dashboard.
+<br>
+Here is an example of a dashboard taht changes everutime a user changes dataset input
+<br><br>
+
+<h6>Example</h6>
+<br>
+
+```python
+
+  from dash import Dash, html, dcc, input, Ouput
+  import plotly.express as px
+
+  # sample datasets
+  iris = px.data.iris()
+  gapminder = px.data.gapminder().query("year= 2007")
+
+  # create the dash app
+  app = Dash(__name__)
+
+  # layout of the app
+  app.layout =html.Div([
+      html.H1("Simple Dash Example"),
+      dcc.Dropdown(
+          id="dataset-dropdown",
+          options=[
+              {"label":"Iris Dataset","value":"iris"},
+              {"label":"Gapminder 2007", "value":"gap"},
+          ],
+          value="iris"
+      ),
+      dcc.Graph(id="plot-area")
+  ])
+
+  # callback to update the figure
+  @app.callback(
+      Output("plot-area", "figure"),
+      Input("dataset-dropdown", "value")
+  )
+
+  def update_graph(dataset_name):
+      if dataset_name == "iris":
+          fig = px.scatter(
+              iris,
+              x="sepal_width",
+              y="sepal_length",
+              collr="species"
+          )
+      else:
+          fig = px.scatter(
+              gapminder,
+              x="gdpPercap",
+              y="lifeExp",
+              color="continent",
+              size="pop"
+              size_max=60
+          )
+      return fig
+
+  # run the app
+  if __name__ == "__main__":
+      app.run_server(debug=True)
+
+```
+
+<br><br>
+There are various other things you can do with dashboards such as:  
+* a multi-page dash app
+* a layout with tabs
+* a dashboard with live updates
+* a bootstrap-styles dash app
+* deploying a dash app (using Render, Heroku, AWS, etc)
+
+<br><br>
+
 
 
 
