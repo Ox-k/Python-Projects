@@ -2448,6 +2448,36 @@ There are various other things you can do with dashboards such as:
 * deploying a dash app (using Render, Heroku, AWS, etc)
 
 <br><br>
+Note
+
+<h6>Main pillars of the code explained</h6>
+<br>
+
+```yml
+
+  Dash: this is the main object that represents the entire application
+  html: this is a html module that creates a HTML object that has all HTML attributes
+  dcc: these are dash componets such as buttons, dropdowns sliders, tabs and etc
+  Input: user events
+  Ouput: respose to user events
+
+  We are importing 'plotly' because dash uses charts extensively, this is important ‼️
+  app=Dash(__name__): this is the variable that will contain the python file
+  app.layout = html.Div([]):
+              app.layout: creates the UI alayout
+              html.Div([]): this is a 'div' that we are accessing from the HTML object
+                             Anything in '[...]' becomes a child of the div.
+
+  to create any HTML element, we chain it to 'html' object. think of it like: html = HTML()
+
+  dcc.Dropdown: this will create an interractive dropdown menu
+                to create a ny interractive component, we use 'dcc.' then the name of the component
+  
+[EXPLOREW MORE ON THIS TOPIC]
+
+```
+
+<br><br>
 
 
 
