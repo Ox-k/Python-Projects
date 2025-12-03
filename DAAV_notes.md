@@ -2345,6 +2345,9 @@ This can be des using tools like <code>Gunicorn or WSGI</code> servers that are 
   # note: if you are using jupyiter notebooks, install dash first
   # !pip install dash jupyter-dash
   from dash import Dash, html, dcc, Input, Output  # here we assume that dash is installed
+
+  # or even better for jypiter:
+  from jupyter_dash import JupyterDash  # 👈
   import plotly.express as px
   import pandas as pd
 
