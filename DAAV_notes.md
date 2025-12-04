@@ -2484,19 +2484,88 @@ Note
 <br><br>
 <h3>Data Visualization with Bokeh</h3>
 Thhis is like a digital canvas. <br>
-You can change color using color palletes to your plots. You can also create your own pallete. <br>
-You can also apply themes. <br>
-You can hylight glyphs and lines to highlight sepcific elements.<br>
-You can use glyphs to create gradients, and other depth styles on your graphs. <br>
-Lines can be customized to be solid, dotted and so on. <br>
-Axes and grids provide guidance to the plot reader.
-Lengends and  annotations: legends are labels and names. annototions includes arrows and other<br>
-visual guidance on the plot. These are like adding sticky notes. <br>
-You can add a hover that provides aditional information. <br>
-You can link multiple plots together that interract seamlessly such that a change in one is <br>
-reflected in the other ones. <br>
-You can export the plot as a stand alone HTML file or use Bokeh server to deploy your plot on the web. <br><br>
+This is a python library for creating interractive, web-friendly visualizations.<br>
+All of this without need to write any <code>JavaScript</code>.<br>
+<h6>You can use it for</h6>
+<ul>
+  <li>interactive line, bar, scatter and area charts</li>
+  <li>Zooming, panning and tooltips</li>
+  <li>Linked plots</li>
+  <li>Dashboards</li>
+  <li>Streaming / real-time data</li>
+  <li>Exporting vizualisation as HTML for websites</li>
+</ul>
+<br>
+<br>
+<h6>Bokeh's 3 main building blocks</h6>
 
+1️⃣ <b>Figure</b><br>
+This is the canvas where you draw glyphs.
+
+<h6>importing Bokeh</h6>
+<br>
+
+```python
+
+  # importing bokeh figure canvas
+  from bokeh.plotting import figure
+
+  p = figure(title="My plot", x_axis_label="x", y_axis_label="y")
+
+```
+
+<br><br>
+
+2️⃣ <b>Glyphs</b><br>
+These are the shapes that  you draw. lines, cycles, bars, patches and ect. <br>
+<h6>Example</h6>
+<br>
+
+```python
+
+  # draw a glyph
+  p.cycle(x=[1,2,3], y=[4,5,6], size=15, color="navy")
+
+```
+
+<br><br>
+<h6>Common glyphs are</h6>
+<br>
+
+```yml
+
+  circle
+  line
+  square
+  vbar .. vertical bar
+  patch ... polygons
+  image
+
+```
+
+<br><br>
+
+3️⃣ <b>Output</b><br>
+Bokey outputs to <br>
+<ul>
+  <li>HTML file</li>
+  <li>A Jupyter notebook cell</li>
+  <li>A Bokeh server app (interractive dashboards)</li>
+</ul>
+
+<h6>Example</h6>
+<br>
+
+```python
+
+  # output
+  output_file("my_plot.html)
+  show(p)
+
+```
+
+<br><br>
+<h3>The art of Data story telling</h3>
 
 
 
