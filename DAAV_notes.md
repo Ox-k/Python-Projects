@@ -2585,10 +2585,12 @@ for  more, see: docs.bokeh.org
 <br>
 <h6>Craftinga  data stotry narrative</h6>
 <code>Set the stage</code>:<br>
+
 * Provide context.<br>
 * Explain the background of your data.<br>
 * Highlight the problem you are trying to solve<br>
 * Why it matters.
+
 <br> <br>
 
 Once this is done .... <br><br>
