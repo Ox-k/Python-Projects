@@ -2482,6 +2482,21 @@ Note
 ```
 
 <br><br>
+<h3>Data Visualization with Bokeh</h3>
+Thhis is like a digital canvas. <br>
+You can change color using color palletes to your plots. You can also create your own pallete. <br>
+You can also apply themes. <br>
+You can hylight glyphs and lines to highlight sepcific elements.<br>
+You can use glyphs to create gradients, and other depth styles on your graphs. <br>
+Lines can be customized to be solid, dotted and so on. <br>
+Axes and grids provide guidance to the plot reader.
+Lengends and  annotations: legends are labels and names. annototions includes arrows and other<br>
+visual guidance on the plot. These are like adding sticky notes. <br>
+You can add a hover that provides aditional information. <br>
+You can link multiple plots together that interract seamlessly such that a change in one is <br>
+reflected in the other ones. <br>
+You can export the plot as a stand alone HTML file or use Bokeh server to deploy your plot on the web. <br><br>
+
 
 
 
