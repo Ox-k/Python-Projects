@@ -2565,8 +2565,49 @@ Bokey outputs to <br>
 ```
 
 <br><br>
+for  more, see: docs.bokeh.org
+<br>
 <h3>The art of Data story telling</h3>
+<h6>Foundation of data story telling</h6>
+<hr>
+<br>
+<ul>
+  <li>Know your audienence: tailer your visualizations and knowledge to resonate with audience.<br>
+  This audience should have the technical knowledge about the story.</li>
+  <li>Define a clear and concise message: Your visualization to should focus on the main idea</li>
+  <li>Use them stratigically: they should highlights the key points and message.
+    <br> they should be clean and easy to interprete.
+  </li>
 
+</ul>
+<br>
+<hr>
+<br>
+<h6>Craftinga  data stotry narrative</h6>
+<code>Set the stage</code>:<br>
+Provide context.<br>
+Explain the background of your data.<br>
+Highlight the problem you are trying to solve<br>
+Why it matters.<br>
+<br>
+Once this is done .... <br>
+<code>Delve into your dataset</code> <br>
+Ask questions, analyse and explore all the paths.<br>
+<code>Embrance the challenges</code>:<br>
+Highlight the road-blocks <br>
+Perhaps your intitial hypothesis was wrong <br>
+Share how you overcame them or how they improved your analysis <br>
+<code>Share your insights</code>: <br>
+Summarize your key takeaways.<br>
+Outline potential implications and suggest actions that can be taken based on your findings. <br>
+Point out what other future possibilities that data tells. <br>
+What new questions  that the data raises. <br>
+<code>Conclude with a call to action</code>: <br>
+Suggest actions that could be takes. <br>
+Encourage audience to explore further and ask their own questions.<br> <br>
+This is more than telling facts and figures but transfoming data into a compelling story. <br>
+<code>Practice .... practice ... and ... practice!</code>
+<br><br>
 
 
 
