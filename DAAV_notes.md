@@ -2585,26 +2585,32 @@ for  more, see: docs.bokeh.org
 <br>
 <h6>Craftinga  data stotry narrative</h6>
 <code>Set the stage</code>:<br>
-Provide context.<br>
-Explain the background of your data.<br>
-Highlight the problem you are trying to solve<br>
-Why it matters.<br>
-<br>
-Once this is done .... <br>
+* Provide context.<br>
+* Explain the background of your data.<br>
+* Highlight the problem you are trying to solve<br>
+* Why it matters.
+<br> <br>
+
+Once this is done .... <br><br>
+
 <code>Delve into your dataset</code> <br>
-Ask questions, analyse and explore all the paths.<br>
+Ask questions, analyse and explore all the paths.<br><br>
+
 <code>Embrance the challenges</code>:<br>
-Highlight the road-blocks <br>
-Perhaps your intitial hypothesis was wrong <br>
-Share how you overcame them or how they improved your analysis <br>
+* Highlight the road-blocks <br>
+* Perhaps your intitial hypothesis was wrong <br>
+* Share how you overcame them or how they improved your analysis <br><br>
+
 <code>Share your insights</code>: <br>
 Summarize your key takeaways.<br>
-Outline potential implications and suggest actions that can be taken based on your findings. <br>
-Point out what other future possibilities that data tells. <br>
-What new questions  that the data raises. <br>
+* Outline potential implications and suggest actions that can be taken based on your findings. <br>
+* Point out what other future possibilities that data tells. <br>
+* What new questions  that the data raises. <br><br>
+
 <code>Conclude with a call to action</code>: <br>
-Suggest actions that could be takes. <br>
-Encourage audience to explore further and ask their own questions.<br> <br>
+* Suggest actions that could be takes. <br>
+* Encourage audience to explore further and ask their own questions.<br> <br>
+
 This is more than telling facts and figures but transfoming data into a compelling story. <br>
 <code>Practice .... practice ... and ... practice!</code>
 <br><br>
