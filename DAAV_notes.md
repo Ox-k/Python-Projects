@@ -2618,9 +2618,75 @@ This is more than telling facts and figures but transfoming data into a compelli
 <br><br>
 <h3>Presenting Data Insights</h3>
 
+Tips: <br>
+<ul>
+  <li>Know your audience: sales team might not be interrested in the technical details,<br>
+    but engineering team might
+  </li>
+  <li>Consider visual type: consider what type of visualization is suitable for the data.<br>
+    If you want to show progress, a line chart might suffice, but if you want to have more data, <br>
+    A bar chart ,ight suffice, a heatmap will handle even more data better
+  </li>
+  <li>Investigare python's libraries to find what strength suits your data
+  </li>
+  <li>Use color strategically: vibrant colors might indicate urgency and re-enforce message</li>
+  <li>Choose the right fonts: stick to few fonts. Fomnt style also matters.<br>
+    Bold can be used for heading, larger fonts can be used for important details
+  </li>
+  <li>Keep it simple: dont overwhelm audience with complex details. Use plain language.</li>
+  <li>Aim for accessibility: account for everyone, including people with disability. <br>
+    use right fonts and font style, right color, description and so on.
+  </li>
+  <li>Use visual hierarchy: employ cues such as size, color. contrast to establish clear order of importance</li>
+  <li>Labels and annotations: clearly and simply label the axis to provide description for the data.<br>
+    label other data series and components to ensure that the view understands what they are seeing.
+  </li>
+  <li>Stroy telling, interractivity and visual appeal.</li>
+</ul>
+<br><br>
+<h6>Cognitive load theory and data visualization</h6>
+<code>Cognitive laod</code> refers to the  mental effort required to process a set information
+<br>
+<h6>Types:</h6>
+<ol>
+  <li>Intrinsic load: this is the complexity of the information itself. somethings are just harder to understand</li>
+  <li>Extraneous load: effort wasted on irrelevant or poorly presetned things</li>
+  <li>Germane load: The effort put intp truly understanding and remembering the information.</li>
+</ol>
+<br>
+To overcome <code>cognitive load</code>, we need to minimize unnecessary clutter in the data.<br>
+<h6>Minimizing unnecessary visual clutter</h6>
+<code>Visual clutter</code>: These are elements that do not directly contribute to the conveying core message of the data.
+<br>
+<ul>
+  <li><b>Using white space effectively</b>: white space surrounding the visual elements provide a breathing room<br>
+  for eyes and help separate different elements.</li>
+  <li><b>Limiting the number of colors and fonts</b>: this create a sense of visual harmony</li>
+  <li><b>Simplifying labels and legends</b>: simple and concise to provide just enough context</li>
+  <li><b>Removing un-necessary chart elements</b>: gridlines, borders and axes can be un-necessary sometimes.</li>
+</ul>
+<br>
+<h6>How to not overwhelm the viewer</h6>
 
+* progressive disclosure: reveal infomation in stages allowing the user to focus on a single aspect at a time
+* Interractive elements: allow the user to control the flow iof information
+* Clear navigation: provide clear tools such as stabs, menus or bread-crumbs
+* Chunking: break large amounts of information into smaller more manageable and engaging chunks.
 
+<br><br>
+<h6>Avoiding biases</h6>
 
-  
+* small sample: pick a sample large enough to represent the population under study
+* Survivorship bias: avoid sampling from a single side
+* sampling bias: avoid sampling a sample that do not represent the target population
+* Confirmation bias: avoid sampling data that agrees with the perspective being tested.<br>
+Avoid data that confirms your pre-existing beliefs. challenge your own perception and seek out different views.
+* anchoring bias: Do not rely on first piece of data and base the whole data story on that information,<br>
+explore and gather more data for accurate conclusion.
+* Echo chambers: Avoid blindly accepting information that align with you own. Seek out different view points.
+* Identifier and handle outliers. Identifier and handle missing data.
+* Avoid mis-leading data visualization =.
+
+<br><br>
 
 <code>to be continued .... </code>
