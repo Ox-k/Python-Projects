@@ -2689,4 +2689,21 @@ explore and gather more data for accurate conclusion.
 
 <br><br>
 
+<h3>Generative AI</h3>
+<h6>What does it do?</h6>
+
+* Leverages complex algorithms and models
+* Learns underlying patterns and structure of data
+* Generates new data from learned knowledge. The data is simalar but not identical to the original data
+
+<br><br>
+<h6>Key characteristics of generative AI</h6>
+
+* __creativity__ : can produce novel and original contents.
+* __data-driven__ : the more the data these model have access to,<br> the better they become at understanding pattern and produce high-quality outputs.
+* __Generative models__ : various models that generate various types of contents. <br>
+** sfdsd
+  * sdfsd
+  * sdfsdfsd
+
 <code>to be continued .... </code>
