@@ -2702,8 +2702,60 @@ explore and gather more data for accurate conclusion.
 * __creativity__ : can produce novel and original contents.
 * __data-driven__ : the more the data these model have access to,<br> the better they become at understanding pattern and produce high-quality outputs.
 * __Generative models__ : various models that generate various types of contents. <br>
-** sfdsd
-  * sdfsd
-  * sdfsdfsd
+
+  * __Generative Adversaria Networks GAN__ 
+  * __Variational Autoencoders VAEs__
+  * __Transformer based models__
+ 
+<br><br>
+<h6>Applications of AI</h6>
+
+* __Art and design__ :AI is being used to create unique artwork, realistic images and innpvative product designs.
+* __Content creation__ : Gen AI is being used to streamline content creation process assisting in the generation of text and media.
+* __Data Augmentation__ : Gen AI is being used to create synthetic data to augment existing databases.
+
+<br><br>
+<h6>Exploring types of AI</h6>
+
+* __Descriminative AI__ : focus 🔍 on classfying and categorizing data into pre-defined categories. <br>It leans to distinguish different classes based on patterns and features within the data.<br> This is used in image recognition, spam filtering and sentimantal analysis.
+* __Predictive AI__ : This AI type utilizes historical data to predict future outcomes and trends.<br>This can be used in salesforce forecasting, stock market prediction and weather.
+* __Re-inforcement learning__ : agentic AI that interractis with an environment by receiving feedback.<br>This is used in applications such as video games, tobotics and autonomous vehicles.
+
+<br><br>
+<h6>Importance of responsible AI development</h6>
+
+* transparency, accountability, fairness and security
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <code>to be continued .... </code>
