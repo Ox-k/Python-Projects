@@ -2769,7 +2769,40 @@ These models learns the intricate patterns anddistributions of the real data and
 * __Generalization__ :<br> synthetic data does not always represent real world scenarions accuratly.<br>Its like practicing playing soccer in a controlled envirnoment but the actual soccer is played in the actual field.
 * __Complexity and cost__ : <br>Generating high quality synthetic data can be complex and expensive.
 
+<br><br>
+<h4>Difference between various Gen AI models</h4>
+All generative AI models answer this one question: <br>
 
+__"How can a computer learn what something looks like well enough to invent a new one?"__
+
+<br><br>
+Then they: <br>
+
+* Study many examoles of the same thing
+* learn patterns of the thing
+* use these patterns to simulurate and create something new
+
+<br>
+Differencd between them is how to they go about these learning procedures.
+<br>
+<h6>GANs</h6>
+
+This has a<br> __generator__ : this tries to make up fake things that look real.<br>and a:<br> __Descriminator__ tries to distinguish what is fake and what is real from the generator
+<br>
+they work together. <br>
+<h6>How this works behing the scenes</h6>
+
+1. The generator creates fake images
+2. The descriminator looks at:
+3.   real images
+4.   fake images
+5. Then descriminator decides:
+6.   This looks "real"
+7.   This lools "Fake"
+8. The generator learns from teh feedback and improves and the descriminator also improves at catching these
+9. they both become very good at what they do
+
+<br><br>
 
 
 
