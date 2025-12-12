@@ -2807,6 +2807,56 @@ they work together. <br>
 
 <br><br>
 
+<h6>VAEs</h6>
+These try to understand what makes something what it is and then tries to re-create it. <br>
+They do not copy.<br>
+
+###### How they work behind the scene
+
+1. Model looks at something, say __face__
+2. it compresses it into a smaller description
+   *  this is like _face-shape_, _eye_spacing_, _complexion_ and so on
+3. This description is not exact, is _fuzzy_
+4. The model then recreates various faces from that description
+   * because this is not the exact description, you can twist various features and aspects of the face to some up with as many faces as possible
+
+<br>
+VAEs leans the mapping possibilities of something, not the eact copies.
+<br><br>
+
+###### Flow based models]
+These take organised noise and creates something out of it.
+<br>
+It can creates something from a noise and turn it back to the noise, __Reversible__ 
+<br>
+<br>
+
+###### How it works behind the hood
+
+1. Starts with pure randmness
+2. Apply small changes
+   * stretch
+   * rotate
+   * re-shape
+   * etc
+3. apply more changes
+4. Eventually, randmoness becomes a realistic image
+
+<br>
+
+__Note__ : everything can be reset/ reversible and nothing is lost in the process, hence reversibility.
+<br>
+
+```yml
+    Imagine taking a sheet of paper (noise),
+    folding several times in a set of patterns (apply changes),
+    annd come up with a paper-place (realistic thing),
+    then stretch the paper back to a sheet (reverse).
+    nothing was lost in the process, the paper is still whole
+```
+
+<br>
+<br>
 
 
 
