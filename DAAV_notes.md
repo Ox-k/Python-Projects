@@ -2794,13 +2794,16 @@ they work together. <br>
 
 1. The generator creates fake images
 2. The descriminator looks at:
-3.   real images
-4.   fake images
-5. Then descriminator decides:
-6.   This looks "real"
-7.   This lools "Fake"
-8. The generator learns from teh feedback and improves and the descriminator also improves at catching these
-9. they both become very good at what they do
+
+   * real images
+   * fake images
+     
+3. Then descriminator decides:
+   * This looks "real"
+   * This lools "Fake"
+     
+4. The generator learns from teh feedback and improves and the descriminator also improves at catching these
+5. they both become very good at what they do
 
 <br><br>
 
