@@ -2917,8 +2917,9 @@ To implement this techique, you can use tools such as:
 
 <br>
 
-__2️⃣ Translation__ <br>
+__2️⃣ Back Translation__ <br>
 
+We use this technique when we want to introce paraphrasing<br>
 In this technique:
 
 * we take an original text
@@ -2935,6 +2936,75 @@ They simply need to maintain the contenxt.
 * Back to one [english] : The cat is asleep
 
 The same context in three different sentence from two different languages. <br>
+
+__3️⃣ Random Insertion and Deletion__ <br>
+
+Here, we add or delete words from our text as long as it doesn not drastically change the meaning. <br>
+We could say:
+
+<h6>example</h6>
+
+* sentence 1: The bird is singing
+* sentence 2: The beautiful bird is singing
+
+changes the sentence alittle but the context is still there. <br>
+This technique teaches the model to be resilient to mino rerrors and variations in text.<br>
+
+> [!WARNING]
+> It is important to put safeguards to ensure that the insertion/deletion:
+>
+> does not lead to grammatically wrong sentences
+>
+> does not lead to nosensical sentences.
+
+<br>
+
+This can be done be specifying the maximum number of words that can be added<br>
+Control the randomness by setting the probability of insertions/deletions<br>
+
+<h3>Image Augmentation Techniques</h3>
+This is useful when we do not have enough image data-set to train our models on.<br>
+It is done by taking the existing images and tweaking them in various ways to come up with different variations of the same image.
+<br><br>
+
+__Rotation__ <br>
+
+Rotating an image in different angles produces different set of images based on the original image.<br>
+It shows objects from different point of views. <br>
+It is important to identify the task at hand and the nature of your data when deciding rotations angles.<br>
+
+<h6>example</h6>
+
+If we are training a model to recognize cars, and we feed it cars that are __Facing Forward__ , this model will struggle to identfy cars facing in other direction other than __forward__ . <br><br>
+
+__Flipping__ <br>
+
+This involves mirroring images __vertically__ or __horizontally__ .<br> This can be useful when we are training a model to recognize face of people when they turn around. <br>
+It can also help a model to identify other items from different perspectives.
+<br><br>
+
+__Cropping__ <br>
+
+This involves selecting a portion of the image and discarding the rest. <br>
+This can:
+
+* help the model isolate a portion of details on the image
+* simulate different zoom levels.
+
+<br><br>
+
+__Brightness adjustment__ <br>
+ Simulating different brightness of an image can train an image respond to various changes in illuminations.
+ <br>
+ This is particulary important in areas like <b>self driving vars</b> to recnogize road conditions in both dim and sunlight conditions.
+ <br><br>
+
+> [!CAUTION]
+> Using too much augmented data can deviate a model from reality. Ensure to create balance.
+
+<br>
+
+
 
 
 
