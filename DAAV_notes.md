@@ -3004,6 +3004,43 @@ __Brightness adjustment__ <br>
 
 <br>
 
+<h3>Best practices for data augmentation</h3>
+
+__1️⃣ Maintain realistic transformation__ <br>
+
+Your augmentations should mimic the natural varitations you 'd expect from the data.<br>
+_example <br>
+If you are training  a model to identify trees, it would be un-realistic to augment images to grow down-wards. Trees do not grow upside down_ <br>
+<br>
+
+__2️⃣ Preserve label consistency__ <br>
+
+Ensure the core meaning of the data remains the same.<br>
+If flipping the image changes context, something is not right then!.
+<br><br>
+
+__3️⃣ Balance augmentation intensity__ <br>
+
+Find the right balance in data augmentation. <br>
+Find the __sweet spot__ between too little and too much augmentation.<br>
+<br>
+
+__4️⃣ Consider domain specific augmentation__ <br>
+
+Understand the specific nuances of ryour domain for more taget and effective augmentations.<br>
+Your augmentations should reflect different the field of your data characteristics.
+<br><br>
+
+__5️⃣ Start simple, then iterate__ <br>
+Begin with basic transformations like flips and so on.<br>
+As you gain confidence in your model, adjust more complex techniques such as:
+
+* messing with colors
+* mess with brightness
+* and so on
+
+<br>
+
 
 
 
