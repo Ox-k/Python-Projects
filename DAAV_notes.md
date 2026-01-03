@@ -2883,7 +2883,7 @@ These cna be improve by increasing the size of the dtaset. <br>
 
 <h3>Text Augmentation Techniques</h3>
 
-__Synonym replacement__ <br>
+__1️⃣ Synonym replacement__ <br>
 
 This is when we swap out certains words in our text with their synonyms <br>
 Instead of saying:
@@ -2905,7 +2905,37 @@ We could say:
 
 <br>
 
-Different words by the same idea and message. <br>
+Different words by the same idea and message. It maintians the sentence structure<br>
+
+To implement this techique, you can use tools such as:
+
+* WordNet
+* pre-trained word embeddings to find suitable synonyms
+
+> [!CAUTION]
+> Ensure that the replacement maintains the contextual meaning of the sentence.
+
+<br>
+
+__2️⃣ Translation__ <br>
+
+In this technique:
+
+* we take an original text
+* translate it into another language, the intermediate langugae
+* then translate it back into the original language
+
+The original __sentence__ and the final __sentence__ do not have to be similar<br>
+They simply need to maintain the contenxt.
+
+<h6>Example</h6>
+
+* Sentence one [english]: The cat is spleeping 
+* intermediate [french] : Le chat dor
+* Back to one [english] : The cat is asleep
+
+The same context in three different sentence from two different languages. <br>
+
 
 
 
