@@ -2858,13 +2858,54 @@ __Note__ : everything can be reset/ reversible and nothing is lost in the proces
 <br>
 <br>
 
+<h3>Data Augmentation</h3>
 
+When we talk about __data augmentation__ ,we are talking about techiniques like
 
+* rotating images
+* flipping the in all directions
+* adjusting their brightness
+* adding noise
+* cropping them
+* ...and so on ...
 
+In this way, a machine learning model will be able to tell the image no matter which way or<br> oriantation it has been presented.
+<br>By doing this, the model will be less sensitive to these variations.
 
+<h6>Overfitting and underfitting</h6>
 
+__overfitting__ happens when the model is too focused on the data key patterns and variations that are specific to that particualr dataset. its like memorizing instead of undertanding the underlying information.<br>
+If something slightly changes in the data, the model struggles to comprehend the data.<br>
 
+__underfitting__ happens when the model is too simple to capture the underlying patterns in new dataset.
+<br>
+These cna be improve by increasing the size of the dtaset. <br>
 
+<h3>Text Augmentation Techniques</h3>
+
+__Synonym replacement__ <br>
+
+This is when we swap out certains words in our text with their synonyms <br>
+Instead of saying:
+
+<h6>Example</h6>
+<br>
+
+```yml
+  The dog is happy
+```
+
+<br> 
+We could say:
+<br>
+
+```yml
+  The Canine is joyful
+```
+
+<br>
+
+Different words by the same idea and message. <br>
 
 
 
