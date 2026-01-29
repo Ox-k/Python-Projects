@@ -139,6 +139,79 @@ the model is trained on some folds and then evaluated on the remaining unseen fo
 ### Model Evaluation
 
 
+#### Key benefits of Model Evaluation
+
+* Identify and fix error to market target improvements
+* avoid over-fitting
+* Choose the best model for the problem and data
+* Built trust
+
+#### Techniques and Metrics
+
+* Accuracy: measures the proportions of the correct predictivnesss measured by a model.
+* recesion and recall: focus on specific type of errors. Precision tells how many of the false positives predicted by the model were actually correct minimizing false positive. 
+* Recall is how many false  positives the model was actuall able to recall
+* F-1 Score: this measures the false positives and negatives by giving them a weight. This is used when a model posiive and negative predictions are crucial to the data analysis at hand.
+
+```
+This is particulary useful in spam email detection by filtering out most of the spams and letting couple slip through so that it does not mis-classify an important email as spam
+```
+
+* Confusion matrix: This is a table that shows true positives and negatives as well as false positives and negatives to show a comphrensive view of the model across different classes of data.
+
+##### Digging deep into confusion matrix
+
+Confusion matrix assesses the effectiveness of a model and and their performance as they work.
+
+It shows model's predictions againts the data labels
+
+|![consufion matrix](image.png)
+
+__What does this mean__
+
+In a confusion matrix, the cells represent the following:
+
+- **True Positives (TP)**: This is typically located in the **top left cell**. It indicates the number of instances where the model correctly predicted a positive outcome.
+
+- **True Negatives (TN)**: This is found in the **bottom right cell**. It shows the number of instances where the model correctly predicted a negative outcome.
+
+- **False Positives (FP)**: This is located in the **top right cell**. It represents the instances where the model incorrectly predicted a positive outcome.
+
+- **False Negatives (FN)**: This is in the **bottom left cell**. It indicates the instances where the model incorrectly predicted a negative outcome.
+
+
+__Limitations of confusions matrix__
+
+* It can oversimplify the complexities of multi-class classification problems. As the number of classes to analysi increanses, above the above cell represenation, it can be harder to represent this accurarately. 
+
+This can be corrected by using __HeatMaps__ instead where the intensity of the color represents the frequency of the predictions.
+
+* Multi-classification struggles: confusion matrix is greate at predicting __X__ or __Not X__ type of scenarios.
+
+__example__
+
+_Willthe customer __buy__ or __not buy__ something today_
+
+When categories go beyond this it struggles  to accurately predict outcomes.
+
+__Example__
+
+_if emails had various categoris such as __spam__, __not spam__, __social__, __promotions_ and so on._
+
+In this case, each class would have its own set or positives and negatives creating a muhch harder matrix that can be hard to interprete.
+
+* A confusion matrix predicts and assing high scores to higher accuracies.  That means if we are trying to predicts teh positives but the negatives outnumber the positives, it will show higher accuracy of the negatives.
+
+##### HeatMaps
+
+- HeatMaps providesa much easier predection of class frequency by assigning higher intensitity color to the more frequent predictions
+- a heatmap basically use color intensity to visualize prediction frequency of a class
+
+### Best Practices of Analyzing and Presenting Datasets
+
+#### 1 Understanding the Data: _The foundation of insight_
+
+
 
 
 
