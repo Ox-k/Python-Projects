@@ -211,9 +211,61 @@ In this case, each class would have its own set or positives and negatives creat
 
 #### 1 Understanding the Data: _The foundation of insight_
 
+Deep understanding of the dataset you are working with.
+
+__Explore the data's__
+
+* Structure: to understand relationship between variables
+* variables
+* A summary of its statistical properties: quick view of the data
 
 
+This step takes care of issues such as:
+
+- missing data ... addressed through _imputation_nor fully _removed_
+- outliers
+- biases
+
+##### Pro tips
+
+__Tip 1__ Always start with data exploration.
+
+Use functions like _.head(), .info(), and .describe()_ to understand the dataset's strucutre and identify missing values or outliers
+
+__Tip 2__ Missing values?
+
+Try simpler techniques like _mean imputation_ first. for _outliers_ visualize them using box plots before deciding to remove or transform
+
+__Tip 3__ Clean and pre-process your data thoroughly. Good data preparations leads to better analysis and modeling outcomes
 
 
+#### 2 Feature Engineering: _Crafting predictive power_
+
+Cretively construct new features from the data or transform existing features to enhance the predictive power of machine learning models.
+
+```yml
+Basicall : taking raw data, adding labels and titles and other features that will help a learning model make better predictions
+```
 
 
+__Example__
+
+_by leveraging a customers purchase habits, you can create a feature such as __Customer Life Time Value__ a feature that identifies high value customers, to whom we can craft retention-advertisment instead of attraction-advertisment_
+
+
+##### Feature Engineering Pro-Tips
+
+__Tip 1__ Focus on creating features that are directly related to the business problem.
+
+__Tip 2__ Analyse customer behaviour pattern for early signs of chirn. Example, look for trends in usage or dissatisfaction metrics.
+
+
+#### 3 Model Selection and Training: _Choosing the right tool_
+
+In this stage, we choose the the appropriate machine learning model for the churn prediction.
+
+For example, if we are dealing with binary classification problems, we could use __Logictic regression__, this is a model that predicts outcomes that have two possible categories, _true_ or _false_ .
+
+__Consider this scenario to illustrate this__
+
+_Imagine you're trying to decide whether to bring an umbrella based on the weather. You might consider factors like cloud cover, humidity, and temperature. __Logistic regression__ does something similar by weighing these factors to give you a probability score between 0 and 1, indicating how likely it is that a customer will churn. If the score is above a certain threshold (like 0.5), you might predict that the customer will leave; if it's below, you predict they will stay._
