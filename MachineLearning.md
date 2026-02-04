@@ -269,3 +269,18 @@ For example, if we are dealing with binary classification problems, we could use
 __Consider this scenario to illustrate this__
 
 _Imagine you're trying to decide whether to bring an umbrella based on the weather. You might consider factors like cloud cover, humidity, and temperature. __Logistic regression__ does something similar by weighing these factors to give you a probability score between 0 and 1, indicating how likely it is that a customer will churn. If the score is above a certain threshold (like 0.5), you might predict that the customer will leave; if it's below, you predict they will stay._
+
+##### Decision trees and Random Forests
+
+__Decision tree__ partitions data  based on feature values:
+
+* Each leaf represents a prediction
+
+__Random Forest__ is the ensemble of several dicision tree.
+
+#### Model evaluation and selection
+
+Evaluating the preformance of various models and select the most suitable one.
+
+
+### Regression Metrics
